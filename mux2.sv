@@ -1,5 +1,5 @@
 
-module mux2 #(parameter W=8) (
+module Mux2 #(parameter W=8) (
   input        [W-1:0] d0, 
                        d1, 
   input                s, 

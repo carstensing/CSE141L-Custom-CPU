@@ -13,7 +13,7 @@ vALU
 Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
 Z1 DXx4 work 11 definitions 0 22 1bma[8NnKhNcoI@lkZ:Mn1
 DXx4 work 11 ALU_sv_unit 0 22 S`6VhXbQ>5<Oa2hce]_eN1
-Z2 !s110 1630080844
+Z2 !s110 1630083623
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 r1
 !s85 0
@@ -26,11 +26,11 @@ Z4 dC:/Users/carst/Desktop/CSE 140L/cpu/ALU
 Z5 w1630080481
 Z6 8C:/Users/carst/Desktop/CSE 140L/cpu/ALU/ALU.sv
 Z7 FC:/Users/carst/Desktop/CSE 140L/cpu/ALU/ALU.sv
-!i122 28
+!i122 31
 L0 3 44
 Z8 OV;L;2020.1;71
 31
-Z9 !s108 1630080844.000000
+Z9 !s108 1630083622.000000
 Z10 !s107 C:/Users/carst/Desktop/CSE 140L/cpu/ALU/ALU.sv|
 Z11 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/carst/Desktop/CSE 140L/cpu/ALU/ALU.sv|
 !i113 1
@@ -53,7 +53,7 @@ R4
 R5
 R6
 R7
-!i122 28
+!i122 31
 Z14 L0 1 0
 R8
 31
@@ -81,13 +81,13 @@ R4
 Z15 w1630080840
 Z16 8C:/Users/carst/Desktop/CSE 140L/cpu/ALU/ALU_tb.sv
 Z17 FC:/Users/carst/Desktop/CSE 140L/cpu/ALU/ALU_tb.sv
-!i122 29
+!i122 32
 L0 3 58
 R8
 31
-R9
-Z18 !s107 C:/Users/carst/Desktop/CSE 140L/cpu/ALU/ALU_tb.sv|
-Z19 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/carst/Desktop/CSE 140L/cpu/ALU/ALU_tb.sv|
+Z18 !s108 1630083623.000000
+Z19 !s107 C:/Users/carst/Desktop/CSE 140L/cpu/ALU/ALU_tb.sv|
+Z20 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/carst/Desktop/CSE 140L/cpu/ALU/ALU_tb.sv|
 !i113 1
 R12
 R13
@@ -108,13 +108,13 @@ R4
 R15
 R16
 R17
-!i122 29
+!i122 32
 R14
 R8
 31
-R9
 R18
 R19
+R20
 !i113 1
 R12
 R13
@@ -132,13 +132,13 @@ R4
 w1630079623
 8C:/Users/carst/Desktop/CSE 140L/cpu/Definitions.sv
 FC:/Users/carst/Desktop/CSE 140L/cpu/Definitions.sv
-!i122 30
+!i122 33
 L0 3 0
 R8
 r1
 !s85 0
 31
-R9
+R18
 !s107 C:/Users/carst/Desktop/CSE 140L/cpu/Definitions.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/carst/Desktop/CSE 140L/cpu/Definitions.sv|
 !i113 1

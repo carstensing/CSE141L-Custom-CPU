@@ -4,7 +4,6 @@ module Ctrl_tb;
   logic [5:0] Instruction;
   wire        RegWrite,
               MemWrite,
-              MemRead,
               BranchRel,
               RegMemSel,
               ALUSrcSel,
@@ -17,7 +16,6 @@ module Ctrl_tb;
     .Instruction,
     .RegWrite,
     .MemWrite,
-    .MemRead,
     .BranchRel,
     .RegMemSel,
     .ALUSrcSel,

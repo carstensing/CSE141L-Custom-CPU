@@ -64,7 +64,7 @@ module encrypt_tb ()        ;
   end
 
 // ***** instantiate your own top level design here *****
-  top_level dut(
+  TopLevel dut(
     .clk     (clk  ),   // input: use your own port names, if different
     .init    (init ),   // input: some prefer to call this ".reset"
     .req     (start),   // input: launch program

@@ -287,3 +287,42 @@ run
 # ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/cpu/ALU/ALU_tb.sv(57)
 #    Time: 140 ns  Iteration: 0  Instance: /ALU_tb
 # Break in Module ALU_tb at C:/Users/carst/Desktop/CSE 140L/cpu/ALU/ALU_tb.sv line 57
+# Compile of ALU.sv was successful.
+# Compile of ALU_tb.sv was successful.
+# Compile of Definitions.sv was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.ALU_tb
+# End time: 10:00:33 on Aug 27,2021, Elapsed time: 1:06:09
+# Errors: 0, Warnings: 2
+# vsim work.ALU_tb 
+# Start time: 10:00:33 on Aug 27,2021
+# Loading sv_std.std
+# Loading work.definitions
+# Loading work.ALU_tb_sv_unit
+# Loading work.ALU_tb
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+run
+# testing . . .
+# ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/cpu/ALU/ALU_tb.sv(57)
+#    Time: 140 ns  Iteration: 0  Instance: /ALU_tb
+# Break in Module ALU_tb at C:/Users/carst/Desktop/CSE 140L/cpu/ALU/ALU_tb.sv line 57
+add wave -position insertpoint  \
+sim:/ALU_tb/alu/InputA \
+sim:/ALU_tb/alu/InputB \
+sim:/ALU_tb/alu/OP \
+sim:/ALU_tb/alu/Out \
+sim:/ALU_tb/alu/Zero \
+sim:/ALU_tb/alu/Parity \
+sim:/ALU_tb/alu/X \
+sim:/ALU_tb/alu/Y \
+sim:/ALU_tb/alu/Result \
+sim:/ALU_tb/alu/op_mnemonic
+restart
+run
+# testing . . .
+# ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/cpu/ALU/ALU_tb.sv(57)
+#    Time: 140 ns  Iteration: 0  Instance: /ALU_tb
+# Break in Module ALU_tb at C:/Users/carst/Desktop/CSE 140L/cpu/ALU/ALU_tb.sv line 57
+# End time: 10:01:28 on Aug 27,2021, Elapsed time: 0:00:55
+# Errors: 0, Warnings: 1

@@ -11,26 +11,26 @@ cModel Technology
 dC:/Users/carst/Desktop/CSE 140L/cpu/ProgCtr
 vCtrl
 Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z1 DXx4 work 11 definitions 0 22 oPF]ESNa>PYkM@<8_>hF[3
-DXx4 work 12 Ctrl_sv_unit 0 22 VkOzOc0[YTMDD`D@0PoRE1
-Z2 !s110 1630038374
+Z1 DXx4 work 11 definitions 0 22 1bma[8NnKhNcoI@lkZ:Mn1
+DXx4 work 12 Ctrl_sv_unit 0 22 B0HkPHZ1:_ncAPk8PLQUI1
+Z2 !s110 1630083772
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 r1
 !s85 0
 !i10b 1
-!s100 hD6`AM8=AlS@GZJe:EhC90
-IA2`U1h>IIm3inaaQzWe0Q0
+!s100 B:d7NblacSA5C2^6_LP:00
+IMLzo1S>i[2]NGcX9=[n9K0
 !s105 Ctrl_sv_unit
 S1
 Z4 dC:/Users/carst/Desktop/CSE 140L/cpu/Ctrl
-Z5 w1630038347
+Z5 w1630083594
 Z6 8C:/Users/carst/Desktop/CSE 140L/cpu/Ctrl/Ctrl.sv
 Z7 FC:/Users/carst/Desktop/CSE 140L/cpu/Ctrl/Ctrl.sv
-!i122 20
-L0 6 137
+!i122 26
+L0 3 130
 Z8 OV;L;2020.1;71
 31
-Z9 !s108 1630038374.000000
+Z9 !s108 1630083772.000000
 Z10 !s107 C:/Users/carst/Desktop/CSE 140L/cpu/Ctrl/Ctrl.sv|
 Z11 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/carst/Desktop/CSE 140L/cpu/Ctrl/Ctrl.sv|
 !i113 1
@@ -41,20 +41,20 @@ XCtrl_sv_unit
 R0
 R1
 R2
-VVkOzOc0[YTMDD`D@0PoRE1
+VB0HkPHZ1:_ncAPk8PLQUI1
 r1
 !s85 0
 !i10b 1
-!s100 <>:eId30eS:j?3`b5fTYf1
-IVkOzOc0[YTMDD`D@0PoRE1
+!s100 LC?ZCcRjjljzD1kGB>dkW1
+IB0HkPHZ1:_ncAPk8PLQUI1
 !i103 1
 S1
 R4
 R5
 R6
 R7
-!i122 20
-L0 2 0
+!i122 26
+Z14 L0 1 0
 R8
 31
 R9
@@ -67,27 +67,27 @@ n@ctrl_sv_unit
 vCtrl_tb
 R0
 R1
-DXx4 work 15 Ctrl_tb_sv_unit 0 22 ]588_Y7DWnl`ODF75S?Q82
+DXx4 work 15 Ctrl_tb_sv_unit 0 22 6S6_D`36iJa7hAR09=jNG3
 R2
 R3
 r1
 !s85 0
 !i10b 1
-!s100 0gzKG4YAY0L]`GPM1l@7<0
-I>cYaS2LzaJ68JVf^F8jah2
+!s100 CS9FN=S?_XM@`Q][Vh[1I3
+IhbZ]^UENLhTPe<AIg`WM`1
 !s105 Ctrl_tb_sv_unit
 S1
 R4
-Z14 w1630038372
-Z15 8C:/Users/carst/Desktop/CSE 140L/cpu/Ctrl/Ctrl_tb.sv
-Z16 FC:/Users/carst/Desktop/CSE 140L/cpu/Ctrl/Ctrl_tb.sv
-!i122 21
-L0 3 41
+Z15 w1630083596
+Z16 8C:/Users/carst/Desktop/CSE 140L/cpu/Ctrl/Ctrl_tb.sv
+Z17 FC:/Users/carst/Desktop/CSE 140L/cpu/Ctrl/Ctrl_tb.sv
+!i122 27
+L0 3 39
 R8
 31
 R9
-Z17 !s107 C:/Users/carst/Desktop/CSE 140L/cpu/Ctrl/Ctrl_tb.sv|
-Z18 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/carst/Desktop/CSE 140L/cpu/Ctrl/Ctrl_tb.sv|
+Z18 !s107 C:/Users/carst/Desktop/CSE 140L/cpu/Ctrl/Ctrl_tb.sv|
+Z19 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/carst/Desktop/CSE 140L/cpu/Ctrl/Ctrl_tb.sv|
 !i113 1
 R12
 R13
@@ -96,25 +96,25 @@ XCtrl_tb_sv_unit
 R0
 R1
 R2
-V]588_Y7DWnl`ODF75S?Q82
+V6S6_D`36iJa7hAR09=jNG3
 r1
 !s85 0
 !i10b 1
-!s100 _2@OVmz2DSF9>jgY?[LEm3
-I]588_Y7DWnl`ODF75S?Q82
+!s100 nTzaKXceT:?cZk<4J?[O_0
+I6S6_D`36iJa7hAR09=jNG3
 !i103 1
 S1
 R4
-R14
 R15
 R16
-!i122 21
-L0 1 0
+R17
+!i122 27
+R14
 R8
 31
 R9
-R17
 R18
+R19
 !i113 1
 R12
 R13
@@ -123,16 +123,16 @@ Xdefinitions
 R0
 R2
 !i10b 1
-!s100 ?E2d>T=B85d?oF3ice=TG2
+!s100 ceJe^Iz=m5`0=7n<F=N943
 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IoPF]ESNa>PYkM@<8_>hF[3
-VoPF]ESNa>PYkM@<8_>hF[3
+I1bma[8NnKhNcoI@lkZ:Mn1
+V1bma[8NnKhNcoI@lkZ:Mn1
 S1
 R4
-w1630037277
+w1630079623
 8C:/Users/carst/Desktop/CSE 140L/cpu/Definitions.sv
 FC:/Users/carst/Desktop/CSE 140L/cpu/Definitions.sv
-!i122 22
+!i122 28
 L0 3 0
 R8
 r1

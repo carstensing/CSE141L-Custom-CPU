@@ -4,7 +4,6 @@ module Ctrl (
   input        [5:0] Instruction,
   output logic       RegWrite,
                      MemWrite,
-                     MemRead,
                      BranchRel,
                      RegMemSel,
                      ALUSrcSel,
@@ -28,7 +27,6 @@ module Ctrl (
   always_comb begin
     RegWrite      = 'b0;
     MemWrite      = 'b0;
-    MemRead       = 'b0;
     BranchRel     = 'b0;
     RegMemSel     = 'b0;
     ALUSrcSel     = 'b0;
@@ -42,7 +40,6 @@ module Ctrl (
                   if (!LOrS) begin // sw
                     RegWrite      = 'b0;
                     MemWrite      = 'b1;
-                    MemRead       = 'b0;
                     BranchRel     = 'b0;
                     // RegMemSel     = 'b0;
                     // ALUSrcSel     = 'b0;
@@ -54,7 +51,6 @@ module Ctrl (
                   else begin // lw
                     RegWrite      = 'b1;
                     MemWrite      = 'b0;
-                    MemRead       = 'b1;
                     BranchRel     = 'b0;
                     RegMemSel     = 'b0;
                     // ALUSrcSel     = 'b0;
@@ -67,7 +63,6 @@ module Ctrl (
       kSET  : begin
                 RegWrite      = 'b1;
                 MemWrite      = 'b0;
-                // MemRead       = 'b0;
                 BranchRel     = 'b0;
                 RegMemSel     = 'b1;
                 // ALUSrcSel     = 'b0;
@@ -79,7 +74,6 @@ module Ctrl (
       kBNE  : begin
                 RegWrite      = 'b0;
                 MemWrite      = 'b0;
-                MemRead       = 'b0;
                 BranchRel     = 'b1;
                 // RegMemSel     = 'b0;
                 ALUSrcSel     = 'b0;
@@ -91,7 +85,6 @@ module Ctrl (
       kPAR  : begin
                 RegWrite      = 'b1;
                 MemWrite      = 'b0;
-                // MemRead       = 'b0;
                 BranchRel     = 'b0;
                 // RegMemSel     = 'b0;
                 ALUSrcSel     = 'b0;
@@ -103,7 +96,6 @@ module Ctrl (
       kADD  : begin
                 RegWrite      = 'b1;
                 // MemWrite      = 'b0;
-                // MemRead       = 'b0;
                 BranchRel     = 'b0;
                 // RegMemSel     = 'b0;
                 ALUSrcSel     = 'b1;
@@ -115,7 +107,6 @@ module Ctrl (
       kXOR  : begin
                 RegWrite      = 'b1;
                 MemWrite      = 'b0;
-                // MemRead       = 'b0;
                 BranchRel     = 'b0;
                 // RegMemSel     = 'b0;
                 ALUSrcSel     = 'b0;
@@ -127,7 +118,6 @@ module Ctrl (
       kLSOR : begin
                 RegWrite      = 'b1;
                 MemWrite      = 'b0;
-                // MemRead       = 'b0;
                 BranchRel     = 'b0;
                 // RegMemSel     = 'b0;
                 ALUSrcSel     = 'b0;

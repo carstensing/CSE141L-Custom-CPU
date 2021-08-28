@@ -7,11 +7,13 @@ module ProgCtr #(parameter W=8) (
     output logic [W-1:0] PC
     );
 
+    logic Branch;
+
     always_ff @(posedge Clk) begin
-        BranchRel = BranchRel & Zero;
+        Branch = BranchRel & Zero;
         if (Reset)
             PC <= 0;
-        else if (BranchRel)
+        else if (Branch)
             PC <= PC - Target;
         else
             PC <= PC + 'b1;

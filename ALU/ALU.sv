@@ -8,27 +8,17 @@ module ALU (
   output logic       Zero,    // flags
                      Parity
   );								    
-	
-  logic [6:0] X,
-              Y,
-              Result;
 
   op_mne op_mnemonic;			    // type enum: used for convenient waveform viewing
-	
-  always_comb begin
-    X = InputA[6:0];
-    Y = InputB[6:0];
-    Out = 'b0;              // No Op = default
 
+  always_comb begin
+    Out = 'b0;              // No Op = default
     case(OP)
       kBNE  : Out = InputA - InputB;
       kPAR  : Out = ^InputA;
       kADD  : Out = InputA + InputB;
       kXOR  : Out = InputA ^ InputB;
-      kLSOR : begin
-                Result = (X << 1) | Y;
-                Out = {1'b0, Result};
-              end
+      kLSOR : Out = {1'b0, ((InputA[6:0] << 1) | InputB[6:0])};
     endcase
   end
 
