@@ -19,7 +19,8 @@ module TopLevel (
              ALUOut;
   wire [2:0] ALUOp,
              ReadAddrOut,
-             WriteAddrOut;
+             WriteAddrOut,
+             LdStOut;
   wire [1:0] WriteAddrSel;
   wire       Zero,
              Parity,
@@ -29,7 +30,8 @@ module TopLevel (
              RegMemSel,
              ALUSrcSel,
              DataSrcSel,
-             ReadAddrSel;
+             ReadAddrSel,
+             LdStSel;
 
   always_comb	begin
     case(Instruction)
@@ -61,16 +63,18 @@ module TopLevel (
     .ALUSrcSel,
     .DataSrcSel,
     .ReadAddrSel,
+    .LdStSel,
     .WriteAddrSel,
     .ALUOp
   );
 
   RegFile regfile (
     .Clk,
+    .Reset,
     .WriteEn   (RegWrite),
     .RaddrA    (Instruction[5:3]),
     .RaddrB    (ReadAddrOut),
-    .RaddrC    (Instruction[2:0]),
+    .RaddrC    (LdStOut),
     .Waddr     (WriteAddrOut),
     .DataIn    (DataSrcOut),
     .DataOutA  (RegOutA),
@@ -82,15 +86,15 @@ module TopLevel (
   DataMem mem (
     .Clk,
     .Reset,
-    .WriteEn      (RegWrite),
+    .WriteEn      (MemWrite),
     .DataAddress  (RegOutC),
     .DataIn       (Reg6),
     .DataOut      (MemOut)
   );
 
   ALU alu (
-    .InputA  (RegOutA),
-    .InputB  (ALUSrcOut),
+    .InputA  (ALUSrcOut),
+    .InputB  (RegOutB),
     .OP      (ALUOp),
     .Out     (ALUOut),		
     .Zero,  
@@ -123,6 +127,13 @@ module TopLevel (
     .d1 (ALUOut), 
     .s  (DataSrcSel), 
     .y  (DataSrcOut)
+  );
+
+  Mux2 loadstore (
+    .d0 (Instruction[2:0]), 
+    .d1 (Instruction[5:3]), 
+    .s  (LdStSel), 
+    .y  (LdStOut)
   );
 
   Mux3 writeaddr (

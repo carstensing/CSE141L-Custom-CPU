@@ -9,6 +9,7 @@ module Ctrl (
                      ALUSrcSel,
                      DataSrcSel,
                      ReadAddrSel,
+                     LdStSel,
   output logic [1:0] WriteAddrSel,
   output logic [2:0] ALUOp
   );
@@ -32,6 +33,7 @@ module Ctrl (
     ALUSrcSel     = 'b0;
     DataSrcSel    = 'b0;
     ReadAddrSel   = 'b0;
+    LdStSel       = 'b0;
     WriteAddrSel  = 'b0;
     ALUOp         = 'b0;
 
@@ -56,6 +58,7 @@ module Ctrl (
                     // ALUSrcSel     = 'b0;
                     DataSrcSel    = 'b0;
                     // ReadAddrSel   = 'b0;
+                    LdStSel       = 'b1;
                     WriteAddrSel  = 'b0;
                     // ALUOp         = 'b0;
                   end
@@ -101,7 +104,7 @@ module Ctrl (
                 ALUSrcSel     = 'b1;
                 DataSrcSel    = 'b1;
                 ReadAddrSel   = 'b1;
-                WriteAddrSel  = 'b0;
+                WriteAddrSel  = 'b1;
                 ALUOp         = kADD;
               end
       kXOR  : begin
