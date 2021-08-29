@@ -1,0 +1,93 @@
+lsw 1 0 
+set 0 7
+add 63
+add 1
+set 2 0
+set 0 1
+add 1
+set 1 0
+lsw 1 0
+set 0 7
+add 63
+add 63
+add 4
+set 6 0
+lsw 6 0
+set 3 7
+set 0 1
+add 1
+set 1 0
+lsw 1 0
+set 4 7
+add 1
+set 1 0
+lsw 5 0
+xor 3 3
+add 10
+set 5 0
+xor 7 4
+errflg 0
+set 6 0
+lsw 0 1
+par 3 4
+lsor 4 0
+set 4 0
+set 0 1
+add 1
+set 1 0
+bne 2 5
+xor 3 3
+set 2 0
+lsw 2 0
+xor 7 4
+errflg 0
+set 6 0
+lsw 0 1
+par 3 4
+lsor 4 0
+set 4 0
+set 0 1
+add 1
+set 1 0
+set 0 2
+add 1
+set 2 0
+xor 3 3
+add 63
+add 63
+add 15
+set 5 0
+lsw 5 0
+xor 3 3
+add 25
+set 5 0
+set 0 7
+lsw 2 0
+bne 7 5
+xor 3 3
+add 63
+add 63
+add 14
+set 5 0
+lsw 5 0
+xor 3 3
+add 11
+set 5 0
+xor 3 3
+add 63
+add 63
+add 2
+set 2 0
+xor 7 4
+errflg 0
+set 6 0
+lsw 0 1
+par 3 4
+lsor 4 0
+set 4 0
+set 0 1
+add 1
+set 1 0
+set 0 2
+bne 1 5
+lsw 0 0

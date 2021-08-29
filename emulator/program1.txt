@@ -1,0 +1,533 @@
+instructions:
+
+set x y
+# reg[x] = reg[y]
+
+lsw
+    sw 0 y
+    # DM[reg[y]] = reg[6]
+
+    lw x 0
+    # reg[7] = DM[reg[x]]
+
+bne x y
+# if Acc != reg[x] then PC-=reg[y]
+
+xor x y
+# Acc = reg[x] ^ reg[y]
+
+add x
+# Acc = Acc + x
+
+par x y
+# Acc = parity(reg[x] & reg[y])
+
+errflg x
+# Acc = {^reg[x], reg[x][6:0]} 
+
+lsor x y
+# Acc = (reg[x]<<1) | reg[y]
+
+DM init:
+0:48  original_message
+61    num_spaces
+62    tap_pattern_index
+63    lfsr_start_state
+130   tap_pattern_list
+140   space_char
+141   delimiter_char
+
+
+reg init:
+0 0   # Acc
+1 61  
+2 0   # i
+3 0   # tap_pattern
+4 0   # curr_lfsr
+5 140 # index
+6 0   # store
+7 0   # load
+
+START
+
+lsw 1 0 
+# reg[7] = DM[reg[1]]
+# load = num_spaces
+
+set 0 7
+# reg[0] = reg[7]
+# Acc = load
+
+add 63
+# Acc = Acc += 63
+# Acc = num_spaces + 63
+
+add 1
+# Acc = Acc += 1
+# Acc = num_spaces + 64
+
+set 2 0
+# reg[2] = reg[0]
+# i = Acc
+
+// i = num_spaces + 64
+
+set 0 1
+# reg[0] = reg[1]
+# Acc = 61
+
+add 1
+# Acc = Acc + 1
+# Acc = 62
+
+set 1 0
+# reg[1] = reg[0]
+# reg[1] = Acc
+
+lsw 1 0
+# reg[7] = DM[reg[1]]
+# load = tap_pattern_index
+
+set 0 7
+# reg[0] = reg[7]
+# Acc = load
+
+add 63
+# Acc = Acc + 63
+# Acc = tap_pattern_index + 63
+
+add 63
+# Acc = Acc + 63
+# Acc = tap_pattern_index + 126
+
+add 4
+# Acc = Acc + 4
+# Acc = tap_pattern_index + 130
+
+set 6 0
+# reg[6] = reg[0]
+# store = Acc
+
+lsw 6 0
+# reg[7] = DM[reg[6]]
+# load = DM[tap_pattern_list+tap_pattern_index]
+
+set 3 7
+# reg[3] = reg[7]
+# tap_pattern = load
+
+// reg[3] = tap_pattern
+
+set 0 1
+# reg[0] = reg[1]
+# Acc = 62
+
+add 1
+# Acc = Acc + 1
+# Acc = 63
+
+set 1 0
+# reg[1] = reg[0]
+# reg[1] = Acc
+
+lsw 1 0
+# reg[7] = DM[reg[1]]
+# load = lfsr_start_state
+
+set 4 7
+# reg[4] = reg[7]
+# curr_lfsr = load
+
+// reg[4] = lfsr_start_state
+
+reg:
+0 63                     # Acc
+1 63                     # counter
+2 num_spaces + 64        # i
+3 tap_pattern            # tap_pattern
+4 lfsr_start_state       # curr_lfsr
+5 140                    # index
+6 tap_pattern_index+240  # store
+7 lfsr_start_state       # load
+
+add 1
+# Acc = Acc + 1
+# Acc = 64
+
+set 1 0
+# reg[1] = reg[0]
+# counter = Acc
+
+lsw 5 0
+# reg[7] = DM[reg[5]]
+# load = space_char
+
+xor 3 3
+# Acc = reg[3] ^ reg[3]
+# Acc = 0
+
+--> add LOOP1
+# Acc = Acc + LOOP1
+# Acc = LOOP1
+
+set 5 0
+# reg[5] = reg[0]
+# num_instructions = Acc
+
+reg:
+0 LOOP1           # Acc
+1 64                     # counter
+2 num_spaces + 64        # i
+3 tap_pattern            # tap_pattern
+4 lfsr_start_state       # curr_lfsr
+5 LOOP1           # index --> num_instructions
+6 tap_pattern_index+130  # store
+7 space_char             # load
+
+#!# LOOP1
+
+xor 7 4
+# Acc = reg[7] ^ reg[4]
+# Acc = load ^ curr_lfsr
+
+errflg 0
+# Acc = {^Acc, Acc[6:0]} 
+
+set 6 0
+# reg[6] = reg[0]
+# store = Acc
+
+lsw 0 1
+# DM[reg[1]] = reg[6]
+# DM[counter] = store
+
+// DM[counter] = space_char ^ curr_lfsr
+
+par 3 4
+# Acc = parity(reg[3] & reg[4])
+# Acc = parity(tap_pattern & curr_lfsr)
+
+// Acc = parity(tap_pattern & curr_lfsr)
+
+lsor 4 0
+# Acc = (reg[4]<<1) | reg[0]
+# Acc = (curr_lfsr<<1) | Acc
+
+set 4 0
+# reg[4] = reg[0]
+# curr_lfsr = Acc
+
+// curr_lfsr = (curr_lfsr<<1) | parity
+
+set 0 1
+# reg[0] = reg[1]
+# Acc = counter
+
+add 1
+# Acc = Acc + 1
+# Acc++
+
+set 1 0
+# reg[1] = reg[0]
+# counter = Acc
+
+// counter++
+
+reg:
+0 counter                 # Acc
+1 counter++               # counter
+2 num_spaces + 64         # i
+3 tap_pattern             # tap_pattern
+4 curr_lfsr               # curr_lfsr
+5 LOOP1            # num_instructions
+6 space_char ^ curr_lfsr  # store
+7 space_char              # load
+
+bne 2 5
+# if Acc != reg[2] then PC-=reg[5]
+# if counter != i then PC-=num_instructions
+
+#!# LOOP1 END
+
+xor 3 3
+# Acc = reg[3] ^ reg[3]
+# Acc = 0
+
+set 2 0
+# reg[2] = reg[0]
+# i = Acc
+
+reg:
+0 0                       # Acc
+1 64 + num_spaces + 1     # counter
+2 0                       # i
+3 tap_pattern             # tap_pattern
+4 curr_lfsr               # curr_lfsr
+5 LOOP1            # num_instructions --> index
+6 space_char ^ curr_lfsr  # store
+7 space_char              # load
+
+#!# LOOP2
+
+lsw 2 0
+# reg[7] = DM[reg[2]]
+# load = DM[i]
+
+xor 7 4
+# Acc = reg[7] ^ reg[4]
+# Acc = load ^ curr_lfsr
+
+errflg 0
+# Acc = {^Acc, Acc[6:0]} 
+
+set 6 0
+# reg[6] = reg[0]
+# store = Acc
+
+lsw 0 1
+# DM[reg[1]] = reg[6]
+# DM[counter] = store
+
+// DM[counter] = DM[i] ^ curr_lfsr
+
+par 3 4
+# Acc = parity(reg[3] & reg[4])
+# Acc = parity(tap_pattern & curr_lfsr)
+
+// Acc = parity(tap_pattern & curr_lfsr)
+
+lsor 4 0
+# Acc = (reg[4]<<1) | reg[0]
+# Acc = (curr_lfsr<<1) | Acc
+
+set 4 0
+# reg[4] = reg[0]
+# curr_lfsr = Acc
+
+// curr_lfsr = (curr_lfsr<<1) | parity
+
+set 0 1
+# reg[0] = reg[1]
+# Acc = counter
+
+add 1
+# Acc = Acc + 1
+# Acc++
+
+set 1 0
+# reg[1] = reg[0]
+# counter = Acc
+
+// counter++
+
+set 0 2
+# reg[0] = reg[2]
+# Acc = i
+
+add 1
+# Acc = Acc + 1
+# Acc = i++
+
+set 2 0
+# reg[2] = reg[0]
+# i = Acc
+
+// # i++
+
+xor 3 3
+# Acc = reg[3] ^ reg[3]
+# Acc = 0
+
+add 63
+# Acc = Acc + 63
+# Acc = 63
+
+add 63
+# Acc = Acc + 63
+# Acc = 126
+
+add 15
+# Acc = Acc + 15
+# Acc = 141
+
+set 5 0
+# reg[5] = reg[0]
+# index = Acc
+
+lsw 5 0
+# reg[7] = DM[reg[5]]
+# load = delimiter_char
+
+xor 3 3
+# Acc = reg[3] ^ reg[3]
+# Acc = 0
+
+--> add LOOP2
+# Acc = Acc + LOOP2
+# Acc = LOOP2
+
+set 5 0
+# reg[5] = reg[0]
+# num_instructions = Acc
+
+// num_instructions = LOOP2
+
+set 0 7
+# reg[0] = reg[7]
+# Acc = load
+
+lsw 2 0
+# reg[7] = DM[reg[2]]
+# load = DM[i]
+
+reg:
+0 delimiter_char          # Acc
+1 counter++               # counter
+2 i++                     # i
+3 tap_pattern             # tap_pattern
+4 curr_lfsr               # curr_lfsr
+5 LOOP2            # num_instructions
+6 DM[i] ^ curr_lfsr       # store
+7 DM[i++]                 # load
+
+bne 7 5
+# if Acc != reg[7] then PC-=reg[5]
+# if delimiter_char != DM[i] then PC-=num_instructions
+
+#!# LOOP2 END
+
+reg:
+0 delimiter_char          # Acc
+1 counter++               # counter
+2 i++                     # i
+3 tap_pattern             # tap_pattern
+4 curr_lfsr               # curr_lfsr
+5 LOOP2            # num_instructions --> index
+6 DM[i] ^ curr_lfsr       # store
+7 delimiter_char          # load
+
+xor 3 3
+# Acc = reg[3] ^ reg[3]
+# Acc = 0
+
+add 63
+# Acc = Acc + 63
+# Acc = 63
+
+add 63
+# Acc = Acc + 63
+# Acc = 126
+
+add 14
+# Acc = Acc + 14
+# Acc = 140
+
+set 5 0
+# reg[5] = reg[0]
+# index = Acc
+
+lsw 5 0
+# reg[7] = DM[reg[5]]
+# load = space_char
+
+xor 3 3
+# Acc = reg[3] ^ reg[3]
+# Acc = 0
+
+--> add LOOP3
+# Acc = Acc + LOOP3
+# Acc = LOOP3
+
+set 5 0
+# reg[5] = reg[0]
+# num_instructions = Acc
+
+xor 3 3
+# Acc = reg[3] ^ reg[3]
+# Acc = 0
+
+add 63
+# Acc = Acc + 63
+# Acc = 63
+
+add 63
+# Acc = Acc + 63
+# Acc = 126
+
+add 2
+# Acc = Acc + 2
+# Acc = 128
+
+set 2 0
+# reg[2] = reg[0]
+# i = Acc
+
+reg:
+0 128                     # Acc
+1 counter++               # counter
+2 128                     # i 
+3 tap_pattern             # tap_pattern
+4 curr_lfsr               # curr_lfsr
+5 LOOP3            # num_instructions
+6 DM[i] ^ curr_lfsr       # store
+7 space_char              # load
+
+#!# LOOP3
+
+xor 7 4
+# Acc = reg[7] ^ reg[4]
+# Acc = load ^ curr_lfsr
+
+errflg 0
+# Acc = {^Acc, Acc[6:0]} 
+
+set 6 0
+# reg[6] = reg[0]
+# store = Acc
+
+lsw 0 1
+# DM[reg[1]] = reg[6]
+# DM[counter] = store
+
+// DM[counter] = space_char ^ curr_lfsr
+
+par 3 4
+# Acc = parity(reg[3] & reg[4])
+# Acc = parity(tap_pattern & curr_lfsr)
+
+// Acc = parity(tap_pattern & curr_lfsr)
+
+lsor 4 0
+# Acc = (reg[4]<<1) | reg[0]
+# Acc = (curr_lfsr<<1) | Acc
+
+set 4 0
+# reg[4] = reg[0]
+# curr_lfsr = Acc
+
+// curr_lfsr = (curr_lfsr<<1) | parity
+
+set 0 1
+# reg[0] = reg[1]
+# Acc = counter
+
+add 1
+# Acc = Acc + 1
+# Acc++
+
+set 1 0
+# reg[1] = reg[0]
+# counter = Acc
+
+set 0 2
+# reg[0] = reg[2]
+# Acc = i
+
+bne 1 5
+# if Acc != reg[1] then PC-=reg[5]
+# if 128 != counter then PC-=num_instructions
+
+#!# LOOP3 END
+
+lsw 0 0
+# ack

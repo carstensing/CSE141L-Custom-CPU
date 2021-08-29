@@ -1,8 +1,10 @@
-*
-!.gitignore
-!/doc/
-!/emulator/
+/src/*/*
+/src/*.*
+
 !/src/*.sv
-!/src/**/*.sv
+!/src/*.txt
+!/src/*/*.sv
+
+
 
 
