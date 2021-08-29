@@ -92,7 +92,7 @@ module Ctrl (
                 // RegMemSel     = 'b0;
                 ALUSrcSel     = 'b0;
                 DataSrcSel    = 'b1;
-                // ReadAddrSel   = 'b0;
+                ReadAddrSel   = 'b0;
                 WriteAddrSel  = 'b1;
                 ALUOp         = kPAR;
               end
