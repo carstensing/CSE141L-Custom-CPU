@@ -7,7 +7,6 @@ module TopLevel (
 
   wire [8:0] Instruction;
   wire [7:0] PC,
-             Target,
              ALUSrcOut,
              RegMemOut,
              DataSrcOut,
@@ -45,7 +44,7 @@ module TopLevel (
     .Clk,
     .BranchRel,
     .Zero,
-    .Target,
+    .Target     (RegOutC),
     .PC
   );
 

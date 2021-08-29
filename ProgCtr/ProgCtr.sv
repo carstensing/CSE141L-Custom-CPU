@@ -9,8 +9,13 @@ module ProgCtr #(parameter W=8) (
 
     logic Branch;
 
+    always_comb
+        case(Zero)
+        'b0     : Branch = BranchRel;
+        default : Branch = 'b0;
+        endcase
+
     always_ff @(posedge Clk) begin
-        Branch = BranchRel & Zero;
         if (Reset)
             PC <= 0;
         else if (Branch)

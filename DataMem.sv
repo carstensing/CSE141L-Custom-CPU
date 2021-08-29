@@ -13,8 +13,7 @@ module DataMem (
     DataOut = Core[DataAddress]; // read
 
   always_ff @ (posedge Clk)	begin	 // writes are sequential
-    if(Reset) begin
-// you may initialize your memory w/ constants, if you wish
+    if (Reset) begin
       for(int i=64;i<256;i++)
 	      Core[i] <= 0;
       Core[130] <= 7'h60;         // tap_pattern_list
@@ -29,7 +28,11 @@ module DataMem (
       Core[140] <= 8'h20;         // space_char
       Core[141] <= 8'b0;          // delimiter_char
 	  end
-    else if(WriteEn) 
-      Core[DataAddress] <= DataIn;
+    else if (WriteEn) begin
+      if (DataAddress >= 64 && DataAddress <= 127)
+        Core[DataAddress] <= {^DataIn, DataIn[6:0]};
+      else
+        Core[DataAddress] <= DataIn;
+    end
   end
 endmodule
