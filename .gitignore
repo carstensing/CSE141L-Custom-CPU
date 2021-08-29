@@ -1,9 +1,8 @@
 *
-
-*/
-
 !.gitignore
+!/doc/
+!/emulator/
+!/src/*.sv
+!/src/**/*.sv
 
-!*.sv
 
-!**/*.sv
