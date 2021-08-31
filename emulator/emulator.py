@@ -104,9 +104,27 @@ def encrypt():
         reg_curr_lfsr = (reg_curr_lfsr<<1) | parity
         reg_index += 1
 
-# def decrypt():
-#     reg_curr_lfsr = 7'b0
-#     while (data_mem[64] != reg_space_char ^ reg_curr_lfsr): 
+def decrypt():
+    i = 255
+    do
+        i++
+        reg[x] = reg_space_char ^ starting_lfsr
+        errflg(reg[x])
+    while (data_mem[64] != reg[x]): 
+    
+    i = 129
+    #!# LOOP2
+    i++
+    curr_lfsr = lfsr_start_state
+    index = 64
+    count = 0
+    #!# LOOP3
+    load = DM[index]
+    Acc = load ^ curr_lfsr
+    if (Acc != space_char) then LOOP2
+    count++
+    curr_lfsr = (curr_lfsr<<1) | parity(curr_lfsr & tap_pattern)
+    if (count != 10) then LOOP3
 
 def show_message():
     i = 0

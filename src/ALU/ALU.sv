@@ -18,7 +18,7 @@ module ALU (
       kBNE    : Out = InputA - InputB;
       kPAR    : Out = {7'b0, (^(InputA & InputB))};
       kADD    : Out = InputA + InputB;
-      kXOR    : Out = InputA ^ InputB;
+      kXOR    : Out = {1'b0, (InputA[6:0] ^ InputB[6:0])};
       kLSOR   : Out = {1'b0, ((InputA[6:0] << 1) | InputB[6:0])};
     endcase
   end

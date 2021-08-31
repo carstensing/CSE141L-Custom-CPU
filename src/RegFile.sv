@@ -35,6 +35,7 @@ always_ff @ (posedge Clk) begin
     for(int i=0;i<(2**D);i++)
 	      Registers[i] <= 0;
     Registers[1] <= 61;
+    Registers[4] <= (2**W - 1);
     Registers[5] <= 140;
   end
   else if (WriteEn)	                             // works just like data_memory writes

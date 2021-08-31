@@ -116,7 +116,9 @@ module encrypt_tb ()        ;
 // ***** load operands into your data memory *****
 // ***** use your instance name for data memory and its internal Core *****
     for(int m=0; m<61; m++)
-	  dut.mem.Core[m] = 8'b0;            // delimiter_char
+	    dut.mem.Core[m] = 8'b0;            // delimiter_char
+    for(int m=64; m<128; m++)
+	    dut.mem.Core[m] = 8'b0;            // delimiter_char
     for(int m=0; m<strlen; m++)
       dut.mem.Core[m] = str1[m];       // overwrite/copy original string into device's data memory[0:strlen-1]
     dut.mem.Core[61] = pre_length;     // number of bytes preceding message

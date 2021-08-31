@@ -14,8 +14,6 @@ module DataMem (
 
   always_ff @ (posedge Clk)	begin	 // writes are sequential
     if (Reset) begin
-      for(int i=64;i<256;i++)
-	      Core[i] <= 0;
       Core[130] <= 7'h60;         // tap_pattern_list
       Core[131] <= 7'h48;      
       Core[132] <= 7'h78;      

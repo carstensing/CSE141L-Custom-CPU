@@ -19,7 +19,10 @@ module ProgCtr #(parameter W=8) (
         if (Reset)
             PC <= 0;
         else if (Branch)
-            PC <= PC - Target;
+            if (Target[W-1] == 1)
+                PC <= PC - {1'b0, Target[W-2:0]};
+            else
+                PC <= PC + Target;
         else
             PC <= PC + 'b1;
     end

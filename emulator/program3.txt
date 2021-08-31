@@ -325,61 +325,38 @@ set 3 7
 xor 3 3
 add 63
 add 63
-add 13
+add 14
 set 6 0
-# store = 139
+# store = 130
 lsw 6 0
-# load = lfsr_start_state
-set 4 7
+# load = space_char
+set 6 7
 
 // curr_lfsr = lfsr_start_state
 
 xor 3 3
 set 1 0
 set 2 0
-add 63
-add 1
-set 5 0
 
 // counter = 0
 // i = 0
-// index = 64
 
 reg init:
-0 64                # Acc
+0 0                 # Acc
 1 0                 # counter
 2 0                 # i
 3 tap_pattern       # tap_pattern
-4 lfsr_start_state  # curr_lfsr
-5 64                # index
-6 139               # store
-7 lfsr_start_state  # load
+4 curr_lfsr         # curr_lfsr
+5 74                # index
+6 space_char        # store
+7 space_char        # load
 
 #!# LOOP4
 
-lsw 5 0
+lsw 7 0
 # load = DM[index]
 
-xor 7 4
-# DM[index] ^ curr_lfsr
 
-set 6 0
-# store = DM[index] ^ curr_lfsr
-
-lsw 0 2
-# DM[i] = store
-
-par 4 3
-
-lsor 4 0
-
-set 4 0
-
-set 0 2
-add 1
-set 2 0
-
-// i++
 
 set 0 5
 add 1
@@ -388,7 +365,7 @@ set 5 0
 // index++
 
 xor 3 3 
---> add LOOP4
+<-- add LOOP4
 set 6 0 
 
 xor 3 3
@@ -397,7 +374,8 @@ add 63
 add 2
 
 bne 5 6
-// if 128 != index then LOOP4
+# if Acc != reg[5] then PC-=reg[6]
+# if 128 != counter then PC-=num_instructions
 
 #!# LOOP4 END
 
