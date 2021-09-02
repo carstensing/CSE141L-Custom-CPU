@@ -73,7 +73,7 @@ EX of a forward branch:
 	...  
 	#!# LOOP1 END  
 				
-	The compiler will get rid of anything after LOOP_NAME so "END" is just there for readability.  
+The compiler will get rid of anything after LOOP_NAME so "END" is just there for readability.  
 This will branch to the instruction AFTER "#!# LOOP_NAME END"  
 				
 EX of a backward branch:  
