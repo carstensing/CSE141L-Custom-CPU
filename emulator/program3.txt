@@ -356,6 +356,9 @@ reg:
 lsw 5 0
 # load = DM[index]
 
+set 1 7
+# counter = DM[index]
+
 xor 7 4
 # Acc = DM[index] ^ curr_lfsr
 
@@ -407,6 +410,13 @@ bne 3 2
 #!# LOOP5 END
 
 set 6 7
+# store = DM[index] ^ curr_lfsr
+
+set 7 1
+# load = DM[index]
+
+xor 3 3
+set 1 0
 
 #!# LOOP6
 
@@ -414,19 +424,14 @@ xor 3 3
 --> add LOOP7
 set 2 0
 
-errflg 6
-# Acc = {^reg[6], reg[6][6:0]} 
-
-xor 0 6
-# Acc = 0 if no error
-set 7 0
-xor 3 3
+errflg 7
+# Acc = {^reg[7], reg[7][6:0]} 
 
 #!# LOOP7
 
 bne 7 2
 # if ERROR then PC+=num_instructions
-# if 0 != X then PC+=num_instructions
+# if Acc != X then PC+=num_instructions
 
 lsw 0 1
 # DM[reg[1]] = reg[6]
@@ -444,8 +449,6 @@ bne 3 2
 # JUMP
 
 #!# LOOP7 END
-
-lsw 0 0
 
 xor 3 3
 add 63
@@ -565,17 +568,18 @@ xor 3 3
 # Acc = reg[3] ^ reg[3]
 # Acc = 0
 
-add 61
-# Acc = 61
+add 63
+add 1
+# Acc = 64
 
 set 2 0
 # reg[2] = reg[0]
 # i = Acc
 
 reg:
-0 61                      # Acc
+0 64                      # Acc
 1 counter++               # counter
-2 61                      # i 
+2 64                      # i 
 3 tap_pattern             # tap_pattern
 4 curr_lfsr               # curr_lfsr
 5 LOOP9                   # num_instructions

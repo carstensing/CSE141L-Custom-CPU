@@ -14,7 +14,7 @@ module ALU (
   always_comb begin
     Out = 'b0;              // No Op = default
     case(OP)
-      kERRFLG : Out = {^InputA, InputA[6:0]};
+      kERRFLG : Out = {^InputA[6:0], InputA[6:0]};
       kBNE    : Out = InputA - InputB;
       kPAR    : Out = {7'b0, (^(InputA & InputB))};
       kADD    : Out = InputA + InputB;

@@ -79,7 +79,7 @@ module decrypt_depad_tb ()        ;
 // you may also pre-load desired constants, etc. into
 //   your data_mem here -- the upper addresses are reserved for your use
 //    dut.data_mem.DM[128]=8'hfe;   //whatever constants you want	
-    file_no = $fopen("msg_decoder_out.txt");		 // create your output file
+    file_no = $fopen("msg_decoder_errflg_out.txt");		 // create your output file
     #0ns strlen = str1.len;       // length of string 1 (# characters between " ")
     if(strlen>49) strlen = 49;          // clip message at 49 characters
     for(space=0;space<24;space++)		// count leading spaces in message

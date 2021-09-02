@@ -101,12 +101,38 @@ def assembly_to_machine(in_file, out_file):
 
 
 text_to_assembly \
- ("C:\\Users\\carst\\Desktop\\CSE 140L\\Program1\\emulator\\program3.txt", \
-  "C:\\Users\\carst\\Desktop\\CSE 140L\\Program1\\emulator\\assembly_code.txt")
+ ("C:\\Users\\carst\\Desktop\\CSE 140L\\Program1\\emulator\\program1.txt", \
+  "C:\\Users\\carst\\Desktop\\CSE 140L\\Program1\\emulator\\assembly_code1.txt")
 
 update_loop_variables \
-  ("C:\\Users\\carst\\Desktop\\CSE 140L\\Program1\\emulator\\assembly_code.txt")
+  ("C:\\Users\\carst\\Desktop\\CSE 140L\\Program1\\emulator\\assembly_code1.txt")
 
 assembly_to_machine \
- ("C:\\Users\\carst\\Desktop\\CSE 140L\\Program1\\emulator\\assembly_code.txt", \
-  "C:\\Users\\carst\\Desktop\\CSE 140L\\Program1\\src\\machine_code.txt")
+ ("C:\\Users\\carst\\Desktop\\CSE 140L\\Program1\\emulator\\assembly_code1.txt", \
+  "C:\\Users\\carst\\Desktop\\CSE 140L\\Program1\\src\\machine_code1.txt")
+
+
+
+text_to_assembly \
+ ("C:\\Users\\carst\\Desktop\\CSE 140L\\Program1\\emulator\\program2.txt", \
+  "C:\\Users\\carst\\Desktop\\CSE 140L\\Program1\\emulator\\assembly_code2.txt")
+
+update_loop_variables \
+  ("C:\\Users\\carst\\Desktop\\CSE 140L\\Program1\\emulator\\assembly_code2.txt")
+
+assembly_to_machine \
+ ("C:\\Users\\carst\\Desktop\\CSE 140L\\Program1\\emulator\\assembly_code2.txt", \
+  "C:\\Users\\carst\\Desktop\\CSE 140L\\Program1\\src\\machine_code2.txt")
+
+
+
+text_to_assembly \
+ ("C:\\Users\\carst\\Desktop\\CSE 140L\\Program1\\emulator\\program3.txt", \
+  "C:\\Users\\carst\\Desktop\\CSE 140L\\Program1\\emulator\\assembly_code3.txt")
+
+update_loop_variables \
+  ("C:\\Users\\carst\\Desktop\\CSE 140L\\Program1\\emulator\\assembly_code3.txt")
+
+assembly_to_machine \
+ ("C:\\Users\\carst\\Desktop\\CSE 140L\\Program1\\emulator\\assembly_code3.txt", \
+  "C:\\Users\\carst\\Desktop\\CSE 140L\\Program1\\src\\machine_code3.txt")

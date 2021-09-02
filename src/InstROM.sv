@@ -9,7 +9,7 @@ module InstROM #(parameter L=8, W=9) (
     InstOut = inst_rom[InstAddress];
  
   initial begin  // load from external text file
-  	$readmemb("machine_code.txt",inst_rom);
+  	$readmemb("machine_code.txt", inst_rom);
   end 
   
 endmodule

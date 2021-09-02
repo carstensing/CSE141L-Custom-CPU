@@ -88,6 +88,7 @@ xor 3 3
 set 1 0
 set 2 0
 lsw 5 0
+set 1 7
 xor 7 4
 set 7 0
 par 4 3
@@ -102,7 +103,7 @@ set 2 0
 set 0 7
 bne 6 2
 xor 3 3 
-add 21
+add 22
 add 63
 add 63
 add 2
@@ -110,21 +111,20 @@ set 2 0
 xor 3 3
 bne 3 2
 set 6 7
+set 7 1
+xor 3 3
+set 1 0
 xor 3 3
 add 7
 set 2 0
-errflg 6
-xor 0 6
-set 7 0
-xor 3 3
+errflg 7
 bne 7 2
 lsw 0 1
 xor 3 3
-add 8
+add 7
 set 2 0
 xor 3 3
 bne 3 2
-lsw 0 0
 xor 3 3
 add 63
 add 63
@@ -144,7 +144,7 @@ set 0 5
 add 1
 set 5 0
 xor 3 3
-add 43
+add 39
 add 63
 add 63
 add 2
@@ -167,7 +167,8 @@ add 63
 add 2
 set 5 0
 xor 3 3
-add 61
+add 63
+add 1
 set 2 0
 set 6 7
 lsw 0 1
