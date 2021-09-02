@@ -1,4 +1,4 @@
-# CSE1401L: Custom CPU
+# CSE140L: Custom CPU
 
 This is a custom CPU, instruction set and compiler that runs three programs. Program 1 is an encrypter using LFSR. Program 2 decrypts what program 1 encrypts. Program 3 is program 2 with error detection in the form of a parity bit.
 
