@@ -1,13 +1,17 @@
 # CSE140L: Custom CPU
 
-This is a custom CPU, instruction set and compiler that runs three programs. Program 1 is an encrypter using LFSR. Program 2 decrypts what program 1 encrypts. Program 3 is program 2 with error detection in the form of a parity bit.
+Video: https://ucsd.zoom.us/rec/share/GqhcYmonFsbpWdIcupfuKaBvvV-i36tc3PIPE8vT5kw89Gx7gjqHQToGPyK7RlDB.-T6R4mlIe1iUxLd2?startTime=1630616838000
+
+This is a custom CPU, instruction set and compiler that runs three programs. Program 1 is an encrypter using LFSR. Program 2 decrypts what program 1 encrypts. Program 3 is program 2 with error detection in the form of a parity bit. All programs pass the test benches. 
 
 compiler.py takes the user-level assembly code, trims it of everything but code, calcuates the correct JUMP distances, and converts the assembly code into machine code.
 
 The output of compiler.py is put into the src folder and to run a specific machine code on the CPU, the file needs to be renamed to "machine_code.txt".
 EX: machine_code1.txt --> machine_code.txt
 
-The three user-level assembly code files are program1.txt, program2.txt, and program3.txt.
+The three user-level assembly code files are program1.txt, program2.txt, and program3.txt. Program1 is the best documented as I was still learning how to write in my assembly language. Program3 is much harder to follow. They all work though.
+
+emulator.py was my atempt to understand the programs at a higher level of code which helped me write them out in assembly. encode() is functioning python and decode() is like sudo assembly.
 
 Diagram of CPU is a paint.net file and you can set the layers to visible to see their data path throught the CPU.
 
@@ -24,6 +28,8 @@ Instructions are 9 bits for 1 instr, and then 1 or 2 reg addresses, or an immedi
 Look at Definitions.sv to see what binary digits map to what instructions.
 
 Instructions:  
+Note that Acc = reg[0] and some other values are hardcoded.
+
 set x y  
 // reg[x] = reg[y]  
 
