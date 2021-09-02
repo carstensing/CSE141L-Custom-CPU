@@ -1,4 +1,4 @@
-# CSE1401L: Custom Cput
+# CSE1401L: Custom CPU
 
 This is a custom CPU, instruction set and compiler that runs three programs. Program 1 is an encrypter using LFSR. Program 2 decrypts what program 1 encrypts. Program 3 is program 2 with error detection in the form of a parity bit.
 
@@ -58,33 +58,30 @@ lsor x y
 // Acc = left-shift(reg[x]) or reg[y]  
 
 Some notes about my user-level code:  
-  "//!// LOOP_NAME" is used to denote the start and end of a loop.  
-  "--> add LOOP_NAME" is used to add a positive value to the PC.  
-  "<-- add LOOP_NAME" is used to add a negative value to the PC.  
-  Anything before "START" is considered a comment.  
-  Anything but valid instructions after "START" are considered comments.  
+    "#!# LOOP_NAME" is used to denote the start and end of a loop.  
+    "--> add LOOP_NAME" is used to add a positive value to the PC.  
+    "<-- add LOOP_NAME" is used to add a negative value to the PC.  
+    Anything before "START" is considered a comment.  
+    Anything but valid instructions after "START" are considered comments.  
   
-  EX of a forward branch:  
-      ...  
+EX of a forward branch:  
+    ...  
     --> add LOOP1  
-      ...  
-    //!// LOOP1  
+    ...  
+    #!# LOOP1  
     bne x y  
-      ...  
-    //!// LOOP1 END  
+    ...  
+    #!# LOOP1 END  
     
-  The compiler will get rid of anything after LOOP_NAME so "END" is just there for readability.  
-  This will branch to the instruction AFTER "//!// LOOP_NAME END"  
+ The compiler will get rid of anything after LOOP_NAME so "END" is just there for readability.  
+This will branch to the instruction AFTER "#!# LOOP_NAME END"  
     
-  EX of a backward branch:  
-    //!// LOOP2  
-      ...  
+EX of a backward branch:  
+    #!# LOOP2  
+    ...  
     <-- add LOOP2  
-      ...  
+    ...  
     bne x y  
-    //!// LOOP2 END  
+    #!# LOOP2 END  
     
-  This will branch backward and start the PC at the instruction AFTER "//!// LOOP_NAME"  
-   
-    
-  
+This will branch backward and start the PC at the instruction AFTER "#!# LOOP_NAME"  
