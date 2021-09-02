@@ -1,5 +1,7 @@
 # CSE1401L-Program1
 
+This is a custom CPU, instruction set and compiler that runs three programs. Program 1 is an encrypter using LFSR. Program 2 decrypts what program 1 encrypts. Program 3 is program 2 with error detection in the form of a parity bit.
+
 compiler.py takes the user-level assembly code, trims it of everything but code, calcuates the correct JUMP distances, and converts the assembly code into machine code.
 
 The output of compiler.py is put into the src folder and to run a specific machine code on the CPU, the file needs to be renamed to "machine_code.txt".
@@ -23,40 +25,40 @@ Look at Definitions.sv to see what binary digits map to what instructions.
 
 Instructions:
 set x y
-# reg[x] = reg[y]
+// reg[x] = reg[y]
 
 lsw 0 y
-# DM[reg[y]] = reg[6]
-# store
+// DM[reg[y]] = reg[6]
+// store
 
 lsw x 0
-# reg[7] = DM[reg[x]]
-# load
+// reg[7] = DM[reg[x]]
+// load
 
 bne x y
-# if Acc != reg[x] then PC-=reg[y]
+// if Acc != reg[x] then PC-=reg[y]
 
 xor x y
-# Acc = {1'b0, (reg[x][6:0] ^ reg[y][6:0])}
+// Acc = {1'b0, (reg[x][6:0] ^ reg[y][6:0])}
 
 add x
-# Acc = Acc + x
-# x is a 6 bit immediate value
+// Acc = Acc + x
+// x is a 6 bit immediate value
 
 par x y
-# Acc = {7'b0, (^(reg[x] & reg[y]))}
-# Acc = a 7 bit 0 or 1
+// Acc = {7'b0, (^(reg[x] & reg[y]))}
+// Acc = a 7 bit 0 or 1
 
 errflg x
-# Acc = {^reg[x][6:0], reg[x][6:0]}
-# x is a 3 bit reg address
+// Acc = {^reg[x][6:0], reg[x][6:0]}
+// x is a 3 bit reg address
 
 lsor x y
-# Acc = {1'b0, ((reg[x][6:0] << 1) | reg[y][6:0])}
-# Acc = left-shift(reg[x]) or reg[y]
+// Acc = {1'b0, ((reg[x][6:0] << 1) | reg[y][6:0])}
+// Acc = left-shift(reg[x]) or reg[y]
 
 Some notes about my user-level code:
-  "#!# LOOP_NAME" is used to denote the start and end of a loop.
+  "//!// LOOP_NAME" is used to denote the start and end of a loop.
   "--> add LOOP_NAME" is used to add a positive value to the PC.
   "<-- add LOOP_NAME" is used to add a negative value to the PC.
   Anything before "START" is considered a comment.
@@ -66,23 +68,23 @@ Some notes about my user-level code:
       ...
     --> add LOOP1
       ...
-    #!# LOOP1
+    //!// LOOP1
     bne x y
       ...
-    #!# LOOP1 END
+    //!// LOOP1 END
     
     The compiler will get rid of anything after LOOP_NAME so "END" is just there for readability.
-    This will branch to the instruction AFTER "#!# LOOP_NAME END"
+    This will branch to the instruction AFTER "//!// LOOP_NAME END"
     
   EX of a backward branch:
-    #!# LOOP2
+    //!// LOOP2
       ...
     <-- add LOOP2
       ...
     bne x y
-    #!# LOOP2 END
+    //!// LOOP2 END
     
-    This will branch backward and start the PC at the instruction AFTER "#!# LOOP_NAME"
+    This will branch backward and start the PC at the instruction AFTER "//!// LOOP_NAME"
    
     
   
