@@ -85,7 +85,11 @@ def assembly_to_machine(in_file, out_file):
     machine_instr += commands[parse[0]]
 
     if (len(parse) == 2):
-      machine_instr += Bit(uint=int(parse[1]), length=6).bin
+      if (parse[0] == "add"):
+        machine_instr += Bit(uint=int(parse[1]), length=6).bin
+      elif (parse[0] == "errflg"):
+        machine_instr += Bit(uint=int(parse[1]), length=3).bin
+        machine_instr += "000"
     elif (len(parse) == 3):
       machine_instr += Bit(uint=int(parse[1]), length=3).bin
       machine_instr += Bit(uint=int(parse[2]), length=3).bin

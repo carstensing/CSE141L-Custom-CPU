@@ -10,52 +10,13 @@
 # Compile of ProgCtr.sv was successful.
 # Compile of program1_tb1_transcript.sv was successful.
 # Compile of program2_tb.sv was successful.
-# 12 compiles, 0 failed with no errors.
-# Compile of DataMem.sv was successful.
-# Compile of Definitions.sv was successful.
-# Compile of InstROM.sv was successful.
-# Compile of mux2.sv was successful.
-# Compile of mux3.sv was successful.
-# Compile of RegFile.sv was successful.
-# Compile of TopLevel.sv was successful.
-# Compile of ALU.sv was successful.
-# Compile of Ctrl.sv was successful.
-# Compile of ProgCtr.sv was successful.
-# Compile of program1_tb1_transcript.sv was successful.
-# Compile of program2_tb.sv was successful.
 # Compile of program3_tb_revised.sv was successful.
 # 13 compiles, 0 failed with no errors.
-vsim -gui work.decrypt_depad_tb
-# vsim -gui work.decrypt_depad_tb 
-# Start time: 18:45:39 on Aug 31,2021
+vsim -gui work.encrypt_tb
+# vsim -gui work.encrypt_tb 
+# Start time: 21:49:37 on Sep 01,2021
 # Loading sv_std.std
-# Loading work.decrypt_depad_tb
-# ** Error: (vsim-3033) Instantiation of 'top_level' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb File: C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv Line: 68
-#         Searched libraries:
-#             C:/Users/carst/Desktop/CSE 140L/Program1/src/work
-# Error loading design
-# End time: 18:45:39 on Aug 31,2021, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 4
-# Compile of DataMem.sv was successful.
-# Compile of Definitions.sv was successful.
-# Compile of InstROM.sv was successful.
-# Compile of mux2.sv was successful.
-# Compile of mux3.sv was successful.
-# Compile of RegFile.sv was successful.
-# Compile of TopLevel.sv was successful.
-# Compile of ALU.sv was successful.
-# Compile of Ctrl.sv was successful.
-# Compile of ProgCtr.sv was successful.
-# Compile of program1_tb1_transcript.sv was successful.
-# Compile of program2_tb.sv was successful.
-# Compile of program3_tb_revised.sv was successful.
-# 13 compiles, 0 failed with no errors.
-vsim -gui work.decrypt_depad_tb
-# vsim -gui work.decrypt_depad_tb 
-# Start time: 18:46:03 on Aug 31,2021
-# Loading sv_std.std
-# Loading work.decrypt_depad_tb
+# Loading work.encrypt_tb
 # Loading work.TopLevel
 # Loading work.ProgCtr
 # Loading work.InstROM
@@ -69,332 +30,101 @@ vsim -gui work.decrypt_depad_tb
 # Loading work.Mux2
 # Loading work.Mux3
 # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+#    Time: 0 ps  Iteration: 0  Instance: /encrypt_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
 # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+#    Time: 0 ps  Iteration: 0  Instance: /encrypt_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
 # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+#    Time: 0 ps  Iteration: 0  Instance: /encrypt_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
 # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+#    Time: 0 ps  Iteration: 0  Instance: /encrypt_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
 # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+#    Time: 0 ps  Iteration: 0  Instance: /encrypt_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
 # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+#    Time: 0 ps  Iteration: 0  Instance: /encrypt_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
 # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+#    Time: 0 ps  Iteration: 0  Instance: /encrypt_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
 # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+#    Time: 0 ps  Iteration: 0  Instance: /encrypt_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
 # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+#    Time: 0 ps  Iteration: 0  Instance: /encrypt_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
 # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+#    Time: 0 ps  Iteration: 0  Instance: /encrypt_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
 run
-# ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv(160)
-#    Time: 6165 ns  Iteration: 0  Instance: /decrypt_depad_tb
-# Break in Module decrypt_depad_tb at C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv line 160
-add wave -position insertpoint  \
-sim:/decrypt_depad_tb/dut/pc/Clk \
-sim:/decrypt_depad_tb/dut/pc/PC
-add wave -position insertpoint  \
-sim:/decrypt_depad_tb/dut/regfile/Registers
-add wave -position insertpoint  \
-sim:/decrypt_depad_tb/dut/ctrl/op_mnemonic
-add wave -position insertpoint  \
-sim:/decrypt_depad_tb/dut/mem/Core
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-run
-# ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv(160)
-#    Time: 6165 ns  Iteration: 0  Instance: /decrypt_depad_tb
-# Break in Module decrypt_depad_tb at C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv line 160
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# Compile of DataMem.sv was successful.
-# Compile of Definitions.sv was successful.
-# Compile of InstROM.sv was successful.
-# Compile of mux2.sv was successful.
-# Compile of mux3.sv was successful.
-# Compile of RegFile.sv was successful.
-# Compile of TopLevel.sv was successful.
-# Compile of ALU.sv was successful.
-# Compile of Ctrl.sv was successful.
-# Compile of ProgCtr.sv was successful.
-# Compile of program1_tb1_transcript.sv was successful.
-# Compile of program2_tb.sv was successful.
-# Compile of program3_tb_revised.sv was successful.
-# 13 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.decrypt_depad_tb
-# Loading work.TopLevel
-# Loading work.ProgCtr
-# Loading work.InstROM
-# Loading work.definitions
-# Loading work.Ctrl_sv_unit
-# Loading work.Ctrl
-# Loading work.RegFile
-# Loading work.DataMem
-# Loading work.ALU_sv_unit
-# Loading work.ALU
-# Loading work.Mux2
-# Loading work.Mux3
-# ** Error: (vsim-3043) Unresolved reference to 'spaces'.
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb File: C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv Line: 87
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# Break key hit
-# Break key hit
-# Break key hit
-# Compile of DataMem.sv was successful.
-# Compile of Definitions.sv was successful.
-# Compile of InstROM.sv was successful.
-# Compile of mux2.sv was successful.
-# Compile of mux3.sv was successful.
-# Compile of RegFile.sv was successful.
-# Compile of TopLevel.sv was successful.
-# Compile of ALU.sv was successful.
-# Compile of Ctrl.sv was successful.
-# Compile of ProgCtr.sv was successful.
-# Compile of program1_tb1_transcript.sv was successful.
-# Compile of program2_tb.sv was successful.
-# Compile of program3_tb_revised.sv was successful.
-# 13 compiles, 0 failed with no errors.
-vsim -gui work.decrypt_depad_tb
-# vsim -gui work.decrypt_depad_tb 
-# Start time: 18:46:03 on Aug 31,2021
-# Loading sv_std.std
-# Loading work.decrypt_depad_tb
-# Loading work.TopLevel
-# Loading work.ProgCtr
-# Loading work.InstROM
-# Loading work.definitions
-# Loading work.Ctrl_sv_unit
-# Loading work.Ctrl
-# Loading work.RegFile
-# Loading work.DataMem
-# Loading work.ALU_sv_unit
-# Loading work.ALU
-# Loading work.Mux2
-# Loading work.Mux3
-# ** Error: (vsim-3043) Unresolved reference to 'spaces'.
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb File: C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv Line: 87
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# Error loading design
-# End time: 18:51:34 on Aug 31,2021, Elapsed time: 0:05:31
-# Errors: 2, Warnings: 22
-# Compile of DataMem.sv was successful.
-# Compile of Definitions.sv was successful.
-# Compile of InstROM.sv was successful.
-# Compile of mux2.sv was successful.
-# Compile of mux3.sv was successful.
-# Compile of RegFile.sv was successful.
-# Compile of TopLevel.sv was successful.
-# Compile of ALU.sv was successful.
-# Compile of Ctrl.sv was successful.
-# Compile of ProgCtr.sv was successful.
-# Compile of program1_tb1_transcript.sv was successful.
-# Compile of program2_tb.sv was successful.
-# Compile of program3_tb_revised.sv was successful.
-# 13 compiles, 0 failed with no errors.
-vsim -gui work.decrypt_depad_tb
-# vsim -gui work.decrypt_depad_tb 
-# Start time: 18:52:15 on Aug 31,2021
-# Loading sv_std.std
-# Loading work.decrypt_depad_tb
-# Loading work.TopLevel
-# Loading work.ProgCtr
-# Loading work.InstROM
-# Loading work.definitions
-# Loading work.Ctrl_sv_unit
-# Loading work.Ctrl
-# Loading work.RegFile
-# Loading work.DataMem
-# Loading work.ALU_sv_unit
-# Loading work.ALU
-# Loading work.Mux2
-# Loading work.Mux3
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Error (suppressible): (vsim-PLI-3069) $fdisplay : Argument number 1 is invalid.
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb File: C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv Line: 87
-# Error loading design
-# End time: 18:52:16 on Aug 31,2021, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 12
-# Compile of DataMem.sv was successful.
-# Compile of Definitions.sv was successful.
-# Compile of InstROM.sv was successful.
-# Compile of mux2.sv was successful.
-# Compile of mux3.sv was successful.
-# Compile of RegFile.sv was successful.
-# Compile of TopLevel.sv was successful.
-# Compile of ALU.sv was successful.
-# Compile of Ctrl.sv was successful.
-# Compile of ProgCtr.sv was successful.
-# Compile of program1_tb1_transcript.sv was successful.
-# Compile of program2_tb.sv was successful.
-# Compile of program3_tb_revised.sv was successful.
-# 13 compiles, 0 failed with no errors.
-vsim -gui work.decrypt_depad_tb
-# vsim -gui work.decrypt_depad_tb 
-# Start time: 18:52:53 on Aug 31,2021
-# Loading sv_std.std
-# Loading work.decrypt_depad_tb
-# Loading work.TopLevel
-# Loading work.ProgCtr
-# Loading work.InstROM
-# Loading work.definitions
-# Loading work.Ctrl_sv_unit
-# Loading work.Ctrl
-# Loading work.RegFile
-# Loading work.DataMem
-# Loading work.ALU_sv_unit
-# Loading work.ALU
-# Loading work.Mux2
-# Loading work.Mux3
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-run
-# Num spaces:           0
-# ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv(161)
-#    Time: 6165 ns  Iteration: 0  Instance: /decrypt_depad_tb
-# Break in Module decrypt_depad_tb at C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv line 161
-restart
-# Compile of DataMem.sv was successful.
+# 00000002
+# run encryption program; original message = 
+# Mr. Watson, come here. I want to see you.
+# pt_no = 00000001
+# LFSR_ptrn = 0x48, LFSR_init = 0x20
+# i=          0, msg_pad=0x20, lfsr=0100000 msg_crypt w/ parity = 0x00
+# i=          1, msg_pad=0x20, lfsr=1000000 msg_crypt w/ parity = 0x60
+# i=          2, msg_pad=0x20, lfsr=0000001 msg_crypt w/ parity = 0x21
+# i=          3, msg_pad=0x20, lfsr=0000010 msg_crypt w/ parity = 0x22
+# i=          4, msg_pad=0x20, lfsr=0000100 msg_crypt w/ parity = 0x24
+# i=          5, msg_pad=0x20, lfsr=0001000 msg_crypt w/ parity = 0x28
+# i=          6, msg_pad=0x20, lfsr=0010001 msg_crypt w/ parity = 0xb1
+# i=          7, msg_pad=0x20, lfsr=0100010 msg_crypt w/ parity = 0x82
+# i=          8, msg_pad=0x20, lfsr=1000100 msg_crypt w/ parity = 0xe4
+# i=          9, msg_pad=0x20, lfsr=0001001 msg_crypt w/ parity = 0xa9
+# i=         10, msg_pad=0x20, lfsr=0010011 msg_crypt w/ parity = 0x33
+# i=         11, msg_pad=0x20, lfsr=0100110 msg_crypt w/ parity = 0x06
+# i=         12, msg_pad=0x20, lfsr=1001100 msg_crypt w/ parity = 0x6c
+# i=         13, msg_pad=0x20, lfsr=0011000 msg_crypt w/ parity = 0xb8
+# i=         14, msg_pad=0x20, lfsr=0110001 msg_crypt w/ parity = 0x11
+# i=         15, msg_pad=0x4d, lfsr=1100010 msg_crypt w/ parity = 0xaf
+# i=         16, msg_pad=0x72, lfsr=1000101 msg_crypt w/ parity = 0xb7
+# i=         17, msg_pad=0x2e, lfsr=0001011 msg_crypt w/ parity = 0xa5
+# i=         18, msg_pad=0x20, lfsr=0010111 msg_crypt w/ parity = 0xb7
+# i=         19, msg_pad=0x57, lfsr=0101110 msg_crypt w/ parity = 0xf9
+# i=         20, msg_pad=0x61, lfsr=1011101 msg_crypt w/ parity = 0x3c
+# i=         21, msg_pad=0x74, lfsr=0111010 msg_crypt w/ parity = 0x4e
+# i=         22, msg_pad=0x73, lfsr=1110101 msg_crypt w/ parity = 0x06
+# i=         23, msg_pad=0x6f, lfsr=1101011 msg_crypt w/ parity = 0x84
+# i=         24, msg_pad=0x6e, lfsr=1010110 msg_crypt w/ parity = 0xb8
+# i=         25, msg_pad=0x2c, lfsr=0101101 msg_crypt w/ parity = 0x81
+# i=         26, msg_pad=0x20, lfsr=1011011 msg_crypt w/ parity = 0x7b
+# i=         27, msg_pad=0x63, lfsr=0110110 msg_crypt w/ parity = 0x55
+# i=         28, msg_pad=0x6f, lfsr=1101100 msg_crypt w/ parity = 0x03
+# i=         29, msg_pad=0x6d, lfsr=1011000 msg_crypt w/ parity = 0x35
+# i=         30, msg_pad=0x65, lfsr=0110000 msg_crypt w/ parity = 0x55
+# i=         31, msg_pad=0x20, lfsr=1100000 msg_crypt w/ parity = 0xc0
+# i=         32, msg_pad=0x68, lfsr=1000001 msg_crypt w/ parity = 0xa9
+# i=         33, msg_pad=0x65, lfsr=0000011 msg_crypt w/ parity = 0x66
+# i=         34, msg_pad=0x72, lfsr=0000110 msg_crypt w/ parity = 0x74
+# i=         35, msg_pad=0x65, lfsr=0001100 msg_crypt w/ parity = 0x69
+# i=         36, msg_pad=0x2e, lfsr=0011001 msg_crypt w/ parity = 0xb7
+# i=         37, msg_pad=0x20, lfsr=0110011 msg_crypt w/ parity = 0x93
+# i=         38, msg_pad=0x49, lfsr=1100110 msg_crypt w/ parity = 0xaf
+# i=         39, msg_pad=0x20, lfsr=1001101 msg_crypt w/ parity = 0xed
+# i=         40, msg_pad=0x77, lfsr=0011010 msg_crypt w/ parity = 0xed
+# i=         41, msg_pad=0x61, lfsr=0110101 msg_crypt w/ parity = 0xd4
+# i=         42, msg_pad=0x6e, lfsr=1101010 msg_crypt w/ parity = 0x84
+# i=         43, msg_pad=0x74, lfsr=1010100 msg_crypt w/ parity = 0xa0
+# i=         44, msg_pad=0x20, lfsr=0101001 msg_crypt w/ parity = 0x09
+# i=         45, msg_pad=0x74, lfsr=1010011 msg_crypt w/ parity = 0x27
+# i=         46, msg_pad=0x6f, lfsr=0100111 msg_crypt w/ parity = 0x48
+# i=         47, msg_pad=0x20, lfsr=1001110 msg_crypt w/ parity = 0xee
+# i=         48, msg_pad=0x73, lfsr=0011100 msg_crypt w/ parity = 0x6f
+# i=         49, msg_pad=0x65, lfsr=0111001 msg_crypt w/ parity = 0x5c
+# i=         50, msg_pad=0x65, lfsr=1110011 msg_crypt w/ parity = 0x96
+# i=         51, msg_pad=0x20, lfsr=1100111 msg_crypt w/ parity = 0x47
+# i=         52, msg_pad=0x79, lfsr=1001111 msg_crypt w/ parity = 0x36
+# i=         53, msg_pad=0x6f, lfsr=0011110 msg_crypt w/ parity = 0x71
+# i=         54, msg_pad=0x75, lfsr=0111101 msg_crypt w/ parity = 0x48
+# i=         55, msg_pad=0x2e, lfsr=1111011 msg_crypt w/ parity = 0x55
+# i=         56, msg_pad=0x20, lfsr=1110110 msg_crypt w/ parity = 0x56
+# i=         57, msg_pad=0x20, lfsr=1101101 msg_crypt w/ parity = 0x4d
+# i=         58, msg_pad=0x20, lfsr=1011010 msg_crypt w/ parity = 0xfa
+# i=         59, msg_pad=0x20, lfsr=0110100 msg_crypt w/ parity = 0x14
+# i=         60, msg_pad=0x20, lfsr=1101000 msg_crypt w/ parity = 0x48
+# i=         61, msg_pad=0x20, lfsr=1010000 msg_crypt w/ parity = 0xf0
+# i=         62, msg_pad=0x20, lfsr=0100001 msg_crypt w/ parity = 0x81
+# i=         63, msg_pad=0x20, lfsr=1000010 msg_crypt w/ parity = 0xe2
+# encrypted string =  
+#  ÄABDHQ"ÑIS&åX1OWEWô\n&$X!õu#Uu`IÜîâW3Oççt$@)Ghéè|6gVëhuvmö4hê!Ç
+# 
+# End time: 21:51:27 on Sep 01,2021, Elapsed time: 0:01:50
+# Errors: 0, Warnings: 12
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              # Compile of DataMem.sv was successful.
 # Compile of Definitions.sv was successful.
 # Compile of InstROM.sv was successful.
 # Compile of mux2.sv was successful.
@@ -446,7 +176,63 @@ restart
 run
 # Num spaces: 13
 # ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv(161)
-#    Time: 6165 ns  Iteration: 0  Instance: /decrypt_depad_tb
+#    Time: 25335 ns  Iteration: 0  Instance: /decrypt_depad_tb
+# Break in Module decrypt_depad_tb at C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv line 161
+# WARNING: No extended dataflow license exists
+# Compile of DataMem.sv was successful.
+# Compile of Definitions.sv was successful.
+# Compile of InstROM.sv was successful.
+# Compile of mux2.sv was successful.
+# Compile of mux3.sv was successful.
+# Compile of RegFile.sv was successful.
+# Compile of TopLevel.sv was successful.
+# Compile of ALU.sv was successful.
+# Compile of Ctrl.sv was successful.
+# Compile of ProgCtr.sv was successful.
+# Compile of program1_tb1_transcript.sv was successful.
+# Compile of program2_tb.sv was successful.
+# Compile of program3_tb_revised.sv was successful.
+# 13 compiles, 0 failed with no errors.
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.decrypt_depad_tb
+# Loading work.TopLevel
+# Loading work.ProgCtr
+# Loading work.InstROM
+# Loading work.definitions
+# Loading work.Ctrl_sv_unit
+# Loading work.Ctrl
+# Loading work.RegFile
+# Loading work.DataMem
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.Mux2
+# Loading work.Mux3
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+run
+# Num spaces: 13
+# ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv(161)
+#    Time: 25335 ns  Iteration: 0  Instance: /decrypt_depad_tb
 # Break in Module decrypt_depad_tb at C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv line 161
 # Compile of DataMem.sv was successful.
 # Compile of Definitions.sv was successful.
@@ -500,133 +286,7 @@ restart
 run
 # Num spaces: 13
 # ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv(161)
-#    Time: 6165 ns  Iteration: 0  Instance: /decrypt_depad_tb
-# Break in Module decrypt_depad_tb at C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv line 161
-# WARNING: No extended dataflow license exists
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# WARNING: No extended dataflow license exists
-# WARNING: No extended dataflow license exists
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# WARNING: No extended dataflow license exists
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# WARNING: No extended dataflow license exists
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Compile of DataMem.sv was successful.
-# Compile of Definitions.sv was successful.
-# Compile of InstROM.sv was successful.
-# Compile of mux2.sv was successful.
-# Compile of mux3.sv was successful.
-# Compile of RegFile.sv was successful.
-# Compile of TopLevel.sv was successful.
-# Compile of ALU.sv was successful.
-# Compile of Ctrl.sv was successful.
-# Compile of ProgCtr.sv was successful.
-# Compile of program1_tb1_transcript.sv was successful.
-# Compile of program2_tb.sv was successful.
-# Compile of program3_tb_revised.sv was successful.
-# 13 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.decrypt_depad_tb
-# Loading work.TopLevel
-# Loading work.ProgCtr
-# Loading work.InstROM
-# Loading work.definitions
-# Loading work.Ctrl_sv_unit
-# Loading work.Ctrl
-# Loading work.RegFile
-# Loading work.DataMem
-# Loading work.ALU_sv_unit
-# Loading work.ALU
-# Loading work.Mux2
-# Loading work.Mux3
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-run
-# Num spaces: 13
-# ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv(161)
-#    Time: 6165 ns  Iteration: 0  Instance: /decrypt_depad_tb
-# Break in Module decrypt_depad_tb at C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv line 161
-# WARNING: No extended dataflow license exists
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Compile of DataMem.sv was successful.
-# Compile of Definitions.sv was successful.
-# Compile of InstROM.sv was successful.
-# Compile of mux2.sv was successful.
-# Compile of mux3.sv was successful.
-# Compile of RegFile.sv was successful.
-# Compile of TopLevel.sv was successful.
-# Compile of ALU.sv was successful.
-# Compile of Ctrl.sv was successful.
-# Compile of ProgCtr.sv was successful.
-# Compile of program1_tb1_transcript.sv was successful.
-# Compile of program2_tb.sv was successful.
-# Compile of program3_tb_revised.sv was successful.
-# 13 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.decrypt_depad_tb
-# Loading work.TopLevel
-# Loading work.ProgCtr
-# Loading work.InstROM
-# Loading work.definitions
-# Loading work.Ctrl_sv_unit
-# Loading work.Ctrl
-# Loading work.RegFile
-# Loading work.DataMem
-# Loading work.ALU_sv_unit
-# Loading work.ALU
-# Loading work.Mux2
-# Loading work.Mux3
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-run
-# Num spaces: 13
-# ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv(161)
-#    Time: 6825 ns  Iteration: 0  Instance: /decrypt_depad_tb
+#    Time: 29875 ns  Iteration: 0  Instance: /decrypt_depad_tb
 # Break in Module decrypt_depad_tb at C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv line 161
 # Compile of DataMem.sv was successful.
 # Compile of Definitions.sv was successful.
@@ -731,7 +391,83 @@ restart
 run
 # Num spaces: 13
 # ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv(161)
-#    Time: 25325 ns  Iteration: 0  Instance: /decrypt_depad_tb
+#    Time: 25335 ns  Iteration: 0  Instance: /decrypt_depad_tb
+# Break in Module decrypt_depad_tb at C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv line 161
+# Compile of DataMem.sv was successful.
+# Compile of Definitions.sv was successful.
+# Compile of InstROM.sv was successful.
+# Compile of mux2.sv was successful.
+# Compile of mux3.sv was successful.
+# Compile of RegFile.sv was successful.
+# Compile of TopLevel.sv was successful.
+# Compile of ALU.sv was successful.
+# Compile of Ctrl.sv was successful.
+# Compile of ProgCtr.sv was successful.
+# Compile of program1_tb1_transcript.sv was successful.
+# Compile of program2_tb.sv was successful.
+# Compile of program3_tb_revised.sv was successful.
+# 13 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.decrypt_depad_tb
+# Loading work.TopLevel
+# Loading work.ProgCtr
+# Loading work.InstROM
+# Loading work.definitions
+# Loading work.Ctrl_sv_unit
+# Loading work.Ctrl
+# Loading work.RegFile
+# Loading work.DataMem
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.Mux2
+# Loading work.Mux3
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+run
+# Num spaces: 13
+# ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv(161)
+#    Time: 26155 ns  Iteration: 0  Instance: /decrypt_depad_tb
 # Break in Module decrypt_depad_tb at C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv line 161
 # Compile of DataMem.sv was successful.
 # Compile of Definitions.sv was successful.
@@ -785,171 +521,5 @@ restart
 run
 # Num spaces: 13
 # ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv(161)
-#    Time: 25325 ns  Iteration: 0  Instance: /decrypt_depad_tb
+#    Time: 26155 ns  Iteration: 0  Instance: /decrypt_depad_tb
 # Break in Module decrypt_depad_tb at C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv line 161
-# WARNING: No extended dataflow license exists
-add wave -position insertpoint  \
-sim:/decrypt_depad_tb/dut/alu/InputA \
-sim:/decrypt_depad_tb/dut/alu/InputB \
-sim:/decrypt_depad_tb/dut/alu/Out
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-run
-# Num spaces: 13
-# ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv(161)
-#    Time: 25325 ns  Iteration: 0  Instance: /decrypt_depad_tb
-# Break in Module decrypt_depad_tb at C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv line 161
-# WARNING: No extended dataflow license exists
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# WARNING: No extended dataflow license exists
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# WARNING: No extended dataflow license exists
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Compile of DataMem.sv was successful.
-# Compile of Definitions.sv was successful.
-# Compile of InstROM.sv was successful.
-# Compile of mux2.sv was successful.
-# Compile of mux3.sv was successful.
-# Compile of RegFile.sv was successful.
-# Compile of TopLevel.sv was successful.
-# Compile of ALU.sv was successful.
-# Compile of Ctrl.sv was successful.
-# Compile of ProgCtr.sv was successful.
-# Compile of program1_tb1_transcript.sv was successful.
-# Compile of program2_tb.sv was successful.
-# Compile of program3_tb_revised.sv was successful.
-# 13 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.decrypt_depad_tb
-# Loading work.TopLevel
-# Loading work.ProgCtr
-# Loading work.InstROM
-# Loading work.definitions
-# Loading work.Ctrl_sv_unit
-# Loading work.Ctrl
-# Loading work.RegFile
-# Loading work.DataMem
-# Loading work.ALU_sv_unit
-# Loading work.ALU
-# Loading work.Mux2
-# Loading work.Mux3
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-run
-# Num spaces: 13
-# ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv(161)
-#    Time: 25385 ns  Iteration: 0  Instance: /decrypt_depad_tb
-# Break in Module decrypt_depad_tb at C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv line 161
-# Compile of DataMem.sv was successful.
-# Compile of Definitions.sv was successful.
-# Compile of InstROM.sv was successful.
-# Compile of mux2.sv was successful.
-# Compile of mux3.sv was successful.
-# Compile of RegFile.sv was successful.
-# Compile of TopLevel.sv was successful.
-# Compile of ALU.sv was successful.
-# Compile of Ctrl.sv was successful.
-# Compile of ProgCtr.sv was successful.
-# Compile of program1_tb1_transcript.sv was successful.
-# Compile of program2_tb.sv was successful.
-# Compile of program3_tb_revised.sv was successful.
-# 13 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.decrypt_depad_tb
-# Loading work.TopLevel
-# Loading work.ProgCtr
-# Loading work.InstROM
-# Loading work.definitions
-# Loading work.Ctrl_sv_unit
-# Loading work.Ctrl
-# Loading work.RegFile
-# Loading work.DataMem
-# Loading work.ALU_sv_unit
-# Loading work.ALU
-# Loading work.Mux2
-# Loading work.Mux3
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-run
-# Num spaces: 13
-# ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv(161)
-#    Time: 25765 ns  Iteration: 0  Instance: /decrypt_depad_tb
-# Break in Module decrypt_depad_tb at C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv line 161
-# WARNING: No extended dataflow license exists
