@@ -85,7 +85,7 @@ xor 3 3
 # Acc = reg[3] ^ reg[3]
 # Acc = 0
 
---> add LOOP1
+<-- add LOOP1
 # Acc = Acc + LOOP1
 # Acc = LOOP1
 
@@ -250,7 +250,7 @@ reg:
 #!# LOOP3
 
 xor 3 3
---> add LOOP2
+<-- add LOOP2
 set 3 0
 // num_instructions = LOOP2
 
@@ -306,7 +306,7 @@ set 5 0
 // index++
 
 xor 3 3
---> add LOOP3
+<-- add LOOP3
 set 3 0
 // num_instructions = LOOP3
 
@@ -388,7 +388,7 @@ set 5 0
 // index++
 
 xor 3 3 
---> add LOOP4
+<-- add LOOP4
 set 6 0 
 
 xor 3 3

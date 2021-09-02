@@ -11,11 +11,51 @@
 # Compile of program1_tb1_transcript.sv was successful.
 # Compile of program2_tb.sv was successful.
 # 12 compiles, 0 failed with no errors.
-vsim -gui work.decrypt_tb
-# vsim -gui work.decrypt_tb 
-# Start time: 12:05:17 on Aug 31,2021
+# Compile of DataMem.sv was successful.
+# Compile of Definitions.sv was successful.
+# Compile of InstROM.sv was successful.
+# Compile of mux2.sv was successful.
+# Compile of mux3.sv was successful.
+# Compile of RegFile.sv was successful.
+# Compile of TopLevel.sv was successful.
+# Compile of ALU.sv was successful.
+# Compile of Ctrl.sv was successful.
+# Compile of ProgCtr.sv was successful.
+# Compile of program1_tb1_transcript.sv was successful.
+# Compile of program2_tb.sv was successful.
+# Compile of program3_tb_revised.sv was successful.
+# 13 compiles, 0 failed with no errors.
+vsim -gui work.decrypt_depad_tb
+# vsim -gui work.decrypt_depad_tb 
+# Start time: 18:45:39 on Aug 31,2021
 # Loading sv_std.std
-# Loading work.decrypt_tb
+# Loading work.decrypt_depad_tb
+# ** Error: (vsim-3033) Instantiation of 'top_level' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb File: C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv Line: 68
+#         Searched libraries:
+#             C:/Users/carst/Desktop/CSE 140L/Program1/src/work
+# Error loading design
+# End time: 18:45:39 on Aug 31,2021, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 4
+# Compile of DataMem.sv was successful.
+# Compile of Definitions.sv was successful.
+# Compile of InstROM.sv was successful.
+# Compile of mux2.sv was successful.
+# Compile of mux3.sv was successful.
+# Compile of RegFile.sv was successful.
+# Compile of TopLevel.sv was successful.
+# Compile of ALU.sv was successful.
+# Compile of Ctrl.sv was successful.
+# Compile of ProgCtr.sv was successful.
+# Compile of program1_tb1_transcript.sv was successful.
+# Compile of program2_tb.sv was successful.
+# Compile of program3_tb_revised.sv was successful.
+# 13 compiles, 0 failed with no errors.
+vsim -gui work.decrypt_depad_tb
+# vsim -gui work.decrypt_depad_tb 
+# Start time: 18:46:03 on Aug 31,2021
+# Loading sv_std.std
+# Loading work.decrypt_depad_tb
 # Loading work.TopLevel
 # Loading work.ProgCtr
 # Loading work.InstROM
@@ -29,31 +69,887 @@ vsim -gui work.decrypt_tb
 # Loading work.Mux2
 # Loading work.Mux3
 # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
 # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
 # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
 # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
 # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
 # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
 # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
 # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
 # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
 # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
-#    Time: 0 ps  Iteration: 0  Instance: /decrypt_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
-add wave -position insertpoint  \
-sim:/decrypt_tb/dut/mem/Core
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: carsten  Hostname: DESKTOP-BSCFCNA  ProcessID: 3332
-#           Attempting to use alternate WLF file "./wlftfv935w".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftfv935w
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
 run
-# LFSR_init:  32
+# ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv(160)
+#    Time: 6165 ns  Iteration: 0  Instance: /decrypt_depad_tb
+# Break in Module decrypt_depad_tb at C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv line 160
+add wave -position insertpoint  \
+sim:/decrypt_depad_tb/dut/pc/Clk \
+sim:/decrypt_depad_tb/dut/pc/PC
+add wave -position insertpoint  \
+sim:/decrypt_depad_tb/dut/regfile/Registers
+add wave -position insertpoint  \
+sim:/decrypt_depad_tb/dut/ctrl/op_mnemonic
+add wave -position insertpoint  \
+sim:/decrypt_depad_tb/dut/mem/Core
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+run
+# ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv(160)
+#    Time: 6165 ns  Iteration: 0  Instance: /decrypt_depad_tb
+# Break in Module decrypt_depad_tb at C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv line 160
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# Compile of DataMem.sv was successful.
+# Compile of Definitions.sv was successful.
+# Compile of InstROM.sv was successful.
+# Compile of mux2.sv was successful.
+# Compile of mux3.sv was successful.
+# Compile of RegFile.sv was successful.
+# Compile of TopLevel.sv was successful.
+# Compile of ALU.sv was successful.
+# Compile of Ctrl.sv was successful.
+# Compile of ProgCtr.sv was successful.
+# Compile of program1_tb1_transcript.sv was successful.
+# Compile of program2_tb.sv was successful.
+# Compile of program3_tb_revised.sv was successful.
+# 13 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.decrypt_depad_tb
+# Loading work.TopLevel
+# Loading work.ProgCtr
+# Loading work.InstROM
+# Loading work.definitions
+# Loading work.Ctrl_sv_unit
+# Loading work.Ctrl
+# Loading work.RegFile
+# Loading work.DataMem
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.Mux2
+# Loading work.Mux3
+# ** Error: (vsim-3043) Unresolved reference to 'spaces'.
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb File: C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv Line: 87
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# Break key hit
+# Break key hit
+# Break key hit
+# Compile of DataMem.sv was successful.
+# Compile of Definitions.sv was successful.
+# Compile of InstROM.sv was successful.
+# Compile of mux2.sv was successful.
+# Compile of mux3.sv was successful.
+# Compile of RegFile.sv was successful.
+# Compile of TopLevel.sv was successful.
+# Compile of ALU.sv was successful.
+# Compile of Ctrl.sv was successful.
+# Compile of ProgCtr.sv was successful.
+# Compile of program1_tb1_transcript.sv was successful.
+# Compile of program2_tb.sv was successful.
+# Compile of program3_tb_revised.sv was successful.
+# 13 compiles, 0 failed with no errors.
+vsim -gui work.decrypt_depad_tb
+# vsim -gui work.decrypt_depad_tb 
+# Start time: 18:46:03 on Aug 31,2021
+# Loading sv_std.std
+# Loading work.decrypt_depad_tb
+# Loading work.TopLevel
+# Loading work.ProgCtr
+# Loading work.InstROM
+# Loading work.definitions
+# Loading work.Ctrl_sv_unit
+# Loading work.Ctrl
+# Loading work.RegFile
+# Loading work.DataMem
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.Mux2
+# Loading work.Mux3
+# ** Error: (vsim-3043) Unresolved reference to 'spaces'.
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb File: C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv Line: 87
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# Error loading design
+# End time: 18:51:34 on Aug 31,2021, Elapsed time: 0:05:31
+# Errors: 2, Warnings: 22
+# Compile of DataMem.sv was successful.
+# Compile of Definitions.sv was successful.
+# Compile of InstROM.sv was successful.
+# Compile of mux2.sv was successful.
+# Compile of mux3.sv was successful.
+# Compile of RegFile.sv was successful.
+# Compile of TopLevel.sv was successful.
+# Compile of ALU.sv was successful.
+# Compile of Ctrl.sv was successful.
+# Compile of ProgCtr.sv was successful.
+# Compile of program1_tb1_transcript.sv was successful.
+# Compile of program2_tb.sv was successful.
+# Compile of program3_tb_revised.sv was successful.
+# 13 compiles, 0 failed with no errors.
+vsim -gui work.decrypt_depad_tb
+# vsim -gui work.decrypt_depad_tb 
+# Start time: 18:52:15 on Aug 31,2021
+# Loading sv_std.std
+# Loading work.decrypt_depad_tb
+# Loading work.TopLevel
+# Loading work.ProgCtr
+# Loading work.InstROM
+# Loading work.definitions
+# Loading work.Ctrl_sv_unit
+# Loading work.Ctrl
+# Loading work.RegFile
+# Loading work.DataMem
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.Mux2
+# Loading work.Mux3
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Error (suppressible): (vsim-PLI-3069) $fdisplay : Argument number 1 is invalid.
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb File: C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv Line: 87
+# Error loading design
+# End time: 18:52:16 on Aug 31,2021, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 12
+# Compile of DataMem.sv was successful.
+# Compile of Definitions.sv was successful.
+# Compile of InstROM.sv was successful.
+# Compile of mux2.sv was successful.
+# Compile of mux3.sv was successful.
+# Compile of RegFile.sv was successful.
+# Compile of TopLevel.sv was successful.
+# Compile of ALU.sv was successful.
+# Compile of Ctrl.sv was successful.
+# Compile of ProgCtr.sv was successful.
+# Compile of program1_tb1_transcript.sv was successful.
+# Compile of program2_tb.sv was successful.
+# Compile of program3_tb_revised.sv was successful.
+# 13 compiles, 0 failed with no errors.
+vsim -gui work.decrypt_depad_tb
+# vsim -gui work.decrypt_depad_tb 
+# Start time: 18:52:53 on Aug 31,2021
+# Loading sv_std.std
+# Loading work.decrypt_depad_tb
+# Loading work.TopLevel
+# Loading work.ProgCtr
+# Loading work.InstROM
+# Loading work.definitions
+# Loading work.Ctrl_sv_unit
+# Loading work.Ctrl
+# Loading work.RegFile
+# Loading work.DataMem
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.Mux2
+# Loading work.Mux3
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+run
+# Num spaces:           0
+# ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv(161)
+#    Time: 6165 ns  Iteration: 0  Instance: /decrypt_depad_tb
+# Break in Module decrypt_depad_tb at C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv line 161
+restart
+# Compile of DataMem.sv was successful.
+# Compile of Definitions.sv was successful.
+# Compile of InstROM.sv was successful.
+# Compile of mux2.sv was successful.
+# Compile of mux3.sv was successful.
+# Compile of RegFile.sv was successful.
+# Compile of TopLevel.sv was successful.
+# Compile of ALU.sv was successful.
+# Compile of Ctrl.sv was successful.
+# Compile of ProgCtr.sv was successful.
+# Compile of program1_tb1_transcript.sv was successful.
+# Compile of program2_tb.sv was successful.
+# Compile of program3_tb_revised.sv was successful.
+# 13 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.decrypt_depad_tb
+# Loading work.TopLevel
+# Loading work.ProgCtr
+# Loading work.InstROM
+# Loading work.definitions
+# Loading work.Ctrl_sv_unit
+# Loading work.Ctrl
+# Loading work.RegFile
+# Loading work.DataMem
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.Mux2
+# Loading work.Mux3
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+run
+# Num spaces: 13
+# ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv(161)
+#    Time: 6165 ns  Iteration: 0  Instance: /decrypt_depad_tb
+# Break in Module decrypt_depad_tb at C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv line 161
+# Compile of DataMem.sv was successful.
+# Compile of Definitions.sv was successful.
+# Compile of InstROM.sv was successful.
+# Compile of mux2.sv was successful.
+# Compile of mux3.sv was successful.
+# Compile of RegFile.sv was successful.
+# Compile of TopLevel.sv was successful.
+# Compile of ALU.sv was successful.
+# Compile of Ctrl.sv was successful.
+# Compile of ProgCtr.sv was successful.
+# Compile of program1_tb1_transcript.sv was successful.
+# Compile of program2_tb.sv was successful.
+# Compile of program3_tb_revised.sv was successful.
+# 13 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.decrypt_depad_tb
+# Loading work.TopLevel
+# Loading work.ProgCtr
+# Loading work.InstROM
+# Loading work.definitions
+# Loading work.Ctrl_sv_unit
+# Loading work.Ctrl
+# Loading work.RegFile
+# Loading work.DataMem
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.Mux2
+# Loading work.Mux3
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+run
+# Num spaces: 13
+# ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv(161)
+#    Time: 6165 ns  Iteration: 0  Instance: /decrypt_depad_tb
+# Break in Module decrypt_depad_tb at C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv line 161
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# WARNING: No extended dataflow license exists
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Compile of DataMem.sv was successful.
+# Compile of Definitions.sv was successful.
+# Compile of InstROM.sv was successful.
+# Compile of mux2.sv was successful.
+# Compile of mux3.sv was successful.
+# Compile of RegFile.sv was successful.
+# Compile of TopLevel.sv was successful.
+# Compile of ALU.sv was successful.
+# Compile of Ctrl.sv was successful.
+# Compile of ProgCtr.sv was successful.
+# Compile of program1_tb1_transcript.sv was successful.
+# Compile of program2_tb.sv was successful.
+# Compile of program3_tb_revised.sv was successful.
+# 13 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.decrypt_depad_tb
+# Loading work.TopLevel
+# Loading work.ProgCtr
+# Loading work.InstROM
+# Loading work.definitions
+# Loading work.Ctrl_sv_unit
+# Loading work.Ctrl
+# Loading work.RegFile
+# Loading work.DataMem
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.Mux2
+# Loading work.Mux3
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+run
+# Num spaces: 13
+# ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv(161)
+#    Time: 6165 ns  Iteration: 0  Instance: /decrypt_depad_tb
+# Break in Module decrypt_depad_tb at C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv line 161
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Compile of DataMem.sv was successful.
+# Compile of Definitions.sv was successful.
+# Compile of InstROM.sv was successful.
+# Compile of mux2.sv was successful.
+# Compile of mux3.sv was successful.
+# Compile of RegFile.sv was successful.
+# Compile of TopLevel.sv was successful.
+# Compile of ALU.sv was successful.
+# Compile of Ctrl.sv was successful.
+# Compile of ProgCtr.sv was successful.
+# Compile of program1_tb1_transcript.sv was successful.
+# Compile of program2_tb.sv was successful.
+# Compile of program3_tb_revised.sv was successful.
+# 13 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.decrypt_depad_tb
+# Loading work.TopLevel
+# Loading work.ProgCtr
+# Loading work.InstROM
+# Loading work.definitions
+# Loading work.Ctrl_sv_unit
+# Loading work.Ctrl
+# Loading work.RegFile
+# Loading work.DataMem
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.Mux2
+# Loading work.Mux3
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+run
+# Num spaces: 13
+# ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv(161)
+#    Time: 6825 ns  Iteration: 0  Instance: /decrypt_depad_tb
+# Break in Module decrypt_depad_tb at C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv line 161
+# Compile of DataMem.sv was successful.
+# Compile of Definitions.sv was successful.
+# Compile of InstROM.sv was successful.
+# Compile of mux2.sv was successful.
+# Compile of mux3.sv was successful.
+# Compile of RegFile.sv was successful.
+# Compile of TopLevel.sv was successful.
+# Compile of ALU.sv was successful.
+# Compile of Ctrl.sv was successful.
+# Compile of ProgCtr.sv was successful.
+# Compile of program1_tb1_transcript.sv was successful.
+# Compile of program2_tb.sv was successful.
+# Compile of program3_tb_revised.sv was successful.
+# 13 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.decrypt_depad_tb
+# Loading work.TopLevel
+# Loading work.ProgCtr
+# Loading work.InstROM
+# Loading work.definitions
+# Loading work.Ctrl_sv_unit
+# Loading work.Ctrl
+# Loading work.RegFile
+# Loading work.DataMem
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.Mux2
+# Loading work.Mux3
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+run
+# Num spaces: 13
+# Compile of DataMem.sv was successful.
+# Compile of Definitions.sv was successful.
+# Compile of InstROM.sv was successful.
+# Compile of mux2.sv was successful.
+# Compile of mux3.sv was successful.
+# Compile of RegFile.sv was successful.
+# Compile of TopLevel.sv was successful.
+# Compile of ALU.sv was successful.
+# Compile of Ctrl.sv was successful.
+# Compile of ProgCtr.sv was successful.
+# Compile of program1_tb1_transcript.sv was successful.
+# Compile of program2_tb.sv was successful.
+# Compile of program3_tb_revised.sv was successful.
+# 13 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.decrypt_depad_tb
+# Loading work.TopLevel
+# Loading work.ProgCtr
+# Loading work.InstROM
+# Loading work.definitions
+# Loading work.Ctrl_sv_unit
+# Loading work.Ctrl
+# Loading work.RegFile
+# Loading work.DataMem
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.Mux2
+# Loading work.Mux3
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+run
+# Num spaces: 13
+# ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv(161)
+#    Time: 25325 ns  Iteration: 0  Instance: /decrypt_depad_tb
+# Break in Module decrypt_depad_tb at C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv line 161
+# Compile of DataMem.sv was successful.
+# Compile of Definitions.sv was successful.
+# Compile of InstROM.sv was successful.
+# Compile of mux2.sv was successful.
+# Compile of mux3.sv was successful.
+# Compile of RegFile.sv was successful.
+# Compile of TopLevel.sv was successful.
+# Compile of ALU.sv was successful.
+# Compile of Ctrl.sv was successful.
+# Compile of ProgCtr.sv was successful.
+# Compile of program1_tb1_transcript.sv was successful.
+# Compile of program2_tb.sv was successful.
+# Compile of program3_tb_revised.sv was successful.
+# 13 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.decrypt_depad_tb
+# Loading work.TopLevel
+# Loading work.ProgCtr
+# Loading work.InstROM
+# Loading work.definitions
+# Loading work.Ctrl_sv_unit
+# Loading work.Ctrl
+# Loading work.RegFile
+# Loading work.DataMem
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.Mux2
+# Loading work.Mux3
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+run
+# Num spaces: 13
+# ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv(161)
+#    Time: 25325 ns  Iteration: 0  Instance: /decrypt_depad_tb
+# Break in Module decrypt_depad_tb at C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv line 161
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint  \
+sim:/decrypt_depad_tb/dut/alu/InputA \
+sim:/decrypt_depad_tb/dut/alu/InputB \
+sim:/decrypt_depad_tb/dut/alu/Out
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+run
+# Num spaces: 13
+# ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv(161)
+#    Time: 25325 ns  Iteration: 0  Instance: /decrypt_depad_tb
+# Break in Module decrypt_depad_tb at C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv line 161
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Compile of DataMem.sv was successful.
+# Compile of Definitions.sv was successful.
+# Compile of InstROM.sv was successful.
+# Compile of mux2.sv was successful.
+# Compile of mux3.sv was successful.
+# Compile of RegFile.sv was successful.
+# Compile of TopLevel.sv was successful.
+# Compile of ALU.sv was successful.
+# Compile of Ctrl.sv was successful.
+# Compile of ProgCtr.sv was successful.
+# Compile of program1_tb1_transcript.sv was successful.
+# Compile of program2_tb.sv was successful.
+# Compile of program3_tb_revised.sv was successful.
+# 13 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.decrypt_depad_tb
+# Loading work.TopLevel
+# Loading work.ProgCtr
+# Loading work.InstROM
+# Loading work.definitions
+# Loading work.Ctrl_sv_unit
+# Loading work.Ctrl
+# Loading work.RegFile
+# Loading work.DataMem
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.Mux2
+# Loading work.Mux3
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+run
+# Num spaces: 13
+# ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv(161)
+#    Time: 25385 ns  Iteration: 0  Instance: /decrypt_depad_tb
+# Break in Module decrypt_depad_tb at C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv line 161
+# Compile of DataMem.sv was successful.
+# Compile of Definitions.sv was successful.
+# Compile of InstROM.sv was successful.
+# Compile of mux2.sv was successful.
+# Compile of mux3.sv was successful.
+# Compile of RegFile.sv was successful.
+# Compile of TopLevel.sv was successful.
+# Compile of ALU.sv was successful.
+# Compile of Ctrl.sv was successful.
+# Compile of ProgCtr.sv was successful.
+# Compile of program1_tb1_transcript.sv was successful.
+# Compile of program2_tb.sv was successful.
+# Compile of program3_tb_revised.sv was successful.
+# 13 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.decrypt_depad_tb
+# Loading work.TopLevel
+# Loading work.ProgCtr
+# Loading work.InstROM
+# Loading work.definitions
+# Loading work.Ctrl_sv_unit
+# Loading work.Ctrl
+# Loading work.RegFile
+# Loading work.DataMem
+# Loading work.ALU_sv_unit
+# Loading work.ALU
+# Loading work.Mux2
+# Loading work.Mux3
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/readaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 103
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/loadstore File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 131
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd0'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd1'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'd2'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'y'. The port definition is at: C:/Users/carst/Desktop/CSE 140L/Program1/src/mux3.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /decrypt_depad_tb/dut/writeaddr File: C:/Users/carst/Desktop/CSE 140L/Program1/src/TopLevel.sv Line: 138
+run
+# Num spaces: 13
+# ** Note: $stop    : C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv(161)
+#    Time: 25765 ns  Iteration: 0  Instance: /decrypt_depad_tb
+# Break in Module decrypt_depad_tb at C:/Users/carst/Desktop/CSE 140L/Program1/src/program3_tb_revised.sv line 161
+# WARNING: No extended dataflow license exists

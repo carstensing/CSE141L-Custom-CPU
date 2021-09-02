@@ -468,7 +468,7 @@ reg:
 2 128                     # i 
 3 tap_pattern             # tap_pattern
 4 curr_lfsr               # curr_lfsr
-5 LOOP3            # num_instructions
+5 LOOP3                   # num_instructions
 6 DM[i] ^ curr_lfsr       # store
 7 space_char              # load
 

@@ -85,7 +85,7 @@ xor 3 3
 # Acc = reg[3] ^ reg[3]
 # Acc = 0
 
---> add LOOP1
+<-- add LOOP1
 # Acc = Acc + LOOP1
 # Acc = LOOP1
 
@@ -235,7 +235,7 @@ xor 3 3
 
 set 1 0
 
-// count = 0
+// counter = 0
 
 reg:
 0 0                 # Acc
@@ -250,7 +250,7 @@ reg:
 #!# LOOP3
 
 xor 3 3
---> add LOOP2
+<-- add LOOP2
 set 3 0
 // num_instructions = LOOP2
 
@@ -297,7 +297,7 @@ set 0 1
 add 1
 set 1 0
 
-// count++
+// counter++
 
 set 0 5
 add 1
@@ -306,7 +306,7 @@ set 5 0
 // index++
 
 xor 3 3
---> add LOOP3
+<-- add LOOP3
 set 3 0
 // num_instructions = LOOP3
 
@@ -316,7 +316,7 @@ add 10
 
 bne 1 3
 # if Acc != reg[1] then PC-=reg[3]
-# if (10 != count) then LOOP3
+# if (10 != counter) then LOOP3
 
 #!# LOOP3 END
 
@@ -341,7 +341,7 @@ set 2 0
 // counter = 0
 // i = 0
 
-reg init:
+reg:
 0 0                 # Acc
 1 0                 # counter
 2 0                 # i
@@ -353,10 +353,25 @@ reg init:
 
 #!# LOOP4
 
-lsw 7 0
+lsw 5 0
 # load = DM[index]
 
+xor 7 4
+# Acc = DM[index] ^ curr_lfsr
 
+set 7 0
+# load = DM[index] ^ curr_lfsr
+
+par 4 3
+# Acc = parity(curr_lfsr & tap_pattern)
+
+lsor 4 0
+# Acc = (reg[4]<<1) | reg[0]
+
+set 4 0
+# curr_lfsr = Acc
+
+//curr_lfsr = (curr_lfsr<<1) | parity(curr_lfsr & tap_pattern)
 
 set 0 5
 add 1
@@ -365,19 +380,137 @@ set 5 0
 // index++
 
 xor 3 3 
+--> add LOOP5
+set 2 0 
+
+set 0 7
+# Acc = DM[index] ^ curr_lfsr
+
+#!# LOOP5
+
+bne 6 2
+# if Acc != reg[6] then PC+=reg[2]
+# if X != space_char then PC+=num_instructions
+
+xor 3 3 
 <-- add LOOP4
-set 6 0 
+set 2 0 
+
+xor 3 3
+
+bne 3 2
+# if Acc != reg[3] then PC-=reg[2]
+# if 0 != tap_pattern then PC-=num_instructions
+
+#!# LOOP4 END
+
+#!# LOOP5 END
+
+#!# LOOP6
+
+lsw 5 0
+# load = DM[index]
+
+xor 7 4
+# Acc = DM[index] ^ curr_lfsr
+# Acc = decrypted_msg
+
+set 6 0
+# store = decrypted_msg
+
+par 4 3
+# Acc = parity(curr_lfsr & tap_pattern)
+
+lsor 4 0
+# Acc = (reg[4]<<1) | reg[0]
+
+set 4 0
+# curr_lfsr = Acc
+
+//curr_lfsr = (curr_lfsr<<1) | parity(curr_lfsr & tap_pattern)
+
+set 0 5
+add 1
+set 5 0
+
+// index++
+
+reg:
+0 index++          # Acc
+1 0                # counter
+2 num_instructions # i
+3 tap_pattern      # tap_pattern
+4 curr_lfsr        # curr_lfsr
+5 index++          # index
+6 decrypted_msg    # store
+7 DM[index]        # load
+
+xor 3 3
+--> add LOOP7
+set 2 0
+
+errflg 6
+# Acc = {^reg[6], reg[6][6:0]} 
+
+xor 0 6
+# Acc = 0 if no error
+set 7 0
+xor 3 3
+
+#!# LOOP7
+
+bne 6 2
+# if ERROR then PC+=num_instructions
+# if 0 != X then PC+=num_instructions
+
+lsw 0 1
+# DM[reg[1]] = reg[6]
+# DM[counter] = decrypted_msg
+
+xor 3 3
+--> add LOOP8
+set 2 0
+
+xor 3 3
+
+#!# LOOP8
+
+bne 3 2
+# JUMP
+
+#!# LOOP7 END
 
 xor 3 3
 add 63
 add 63
 add 2
 
-bne 5 6
-# if Acc != reg[5] then PC-=reg[6]
-# if 128 != counter then PC-=num_instructions
+set 6 0
 
-#!# LOOP4 END
+lsw 0 1
+// load error flag
+
+#!# LOOP8 END
+
+set 0 1
+add 1
+set 1 0
+
+// counter++
+
+xor 3 3
+<-- add LOOP6
+set 2 0
+
+xor 3 3
+add 63
+add 63
+add 2
+
+bne 5 2
+# if 128 != index then PC-=num_instructions
+
+#!# LOOP6 END
 
 lsw 0 0
 # ack

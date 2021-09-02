@@ -25,7 +25,10 @@ def text_to_assembly(in_file, out_file):
         command = commands.get(parse[0], False)
         if (command != False):
           assembly_code.write(text)
-        elif (parse[0] == "#!#" or parse[0] == "-->" or parse[0] == "<--"):
+        elif (parse[0] == "#!#" or parse[0] == "-->"):
+          assembly_code.write(text)
+        elif (parse[0] == "<--"):
+          text = text + "add 63\nadd 63\nadd 2\n"
           assembly_code.write(text)
     elif (text == "START\n" and start == False):
       start = True
@@ -50,9 +53,6 @@ def update_loop_variables(file):
       else:
         loop_values[parse[1]] = update_loops[parse[1]]
         update_loops.pop(parse[1])
-    elif (parse[0] == "<--"):
-      for key in update_loops:
-        update_loops[key] = update_loops[key] + 4
     else:
       for key in update_loops:
         update_loops[key] = update_loops[key] + 1
@@ -63,11 +63,10 @@ def update_loop_variables(file):
   for instr in output_text.split('\n'):
     parse = instr.split()
     if (len(parse) > 0):
-      if (parse[0] == "-->"):
+      if (parse[0] == "<--"):
         instr = parse[1] + ' ' + str(loop_values[parse[2]])
-      elif (parse[0] == "<--"):
-        instr = parse[1] + ' ' + str(loop_values[parse[2]]) \
-                + "\nadd 63\nadd 63\nadd 2"
+      elif (parse[0] == "-->"):
+        instr = parse[1] + ' ' + str(loop_values[parse[2]]+1)
 
       if (parse[0] != "#!#"):
         assembly_code.write(instr+"\n")
@@ -98,7 +97,7 @@ def assembly_to_machine(in_file, out_file):
 
 
 text_to_assembly \
- ("C:\\Users\\carst\\Desktop\\CSE 140L\\Program1\\emulator\\program2.txt", \
+ ("C:\\Users\\carst\\Desktop\\CSE 140L\\Program1\\emulator\\program3.txt", \
   "C:\\Users\\carst\\Desktop\\CSE 140L\\Program1\\emulator\\assembly_code.txt")
 
 update_loop_variables \
