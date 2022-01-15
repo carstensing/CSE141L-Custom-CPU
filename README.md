@@ -1,4 +1,4 @@
-# CSE140L: Custom CPU
+# CSE141L: Custom CPU
 
 Video: https://ucsd.zoom.us/rec/share/GqhcYmonFsbpWdIcupfuKaBvvV-i36tc3PIPE8vT5kw89Gx7gjqHQToGPyK7RlDB.-T6R4mlIe1iUxLd2?startTime=1630616838000
 
