@@ -28,7 +28,10 @@ def init_test_bench():
         Bit(bin='0b1111110'),
         Bit(bin='0b1111011')
     ]
-    data_mem[TAP_PATTERN_LIST_INDEX:len(lfsr_tap_patterns)] = lfsr_tap_patterns
+    data_mem[TAP_PATTERN_LIST_INDEX: \
+             TAP_PATTERN_LIST_INDEX+len(lfsr_tap_patterns)] = lfsr_tap_patterns
+
+    print("data tap_patterns: ", data_mem[TAP_PATTERN_LIST_INDEX:TAP_PATTERN_LIST_INDEX+len(lfsr_tap_patterns)])
 
     lfsr_starting_state = Bit(bin='0b0100000')
 
@@ -40,8 +43,8 @@ def init_test_bench():
 
     data_mem[:len(sentence)] = sentence
     data_mem[N_SPACES_INDEX] = spaces
-    # LFSR_PATTERN_INDEX = rand.randint(0, 8)
-    LFSR_PATTERN_INDEX = 1
+    # LFSR_PATTERN_INDEX = rand.randint(0, 8) TODO implement the correct selection of a random index in datamem
+    # LFSR_PATTERN_INDEX = 1
     data_mem[LFSR_STATE_INDEX] = lfsr_starting_state
     data_mem[DELIMITER_INDEX] = Bit(int=ord(DATA_MEM_DELIMITER), length=8)[1:]
 
@@ -65,7 +68,7 @@ def get_parity(num):
         bit = int(bit, base=2)
         carry = carry ^ bit
 
-    # print(num.bin, Bit(int=carry, length=8)[1:].bin)
+    print(num.bin, Bit(int=carry, length=8)[1:].bin)
     return Bit(int=carry, length=8)[1:]
 
 def encrypt():
@@ -73,6 +76,7 @@ def encrypt():
     reg_space_char = Bit(int=ord(' '), length=8)[1:] # TODO store in data_mem
     reg_index = 64
     tap_pattern = data_mem[TAP_PATTERN_LIST_INDEX+int(data_mem[LFSR_PATTERN_INDEX].bin, base=2)]
+    # print("tap pattern: ", tap_pattern)
     num_spaces = int(data_mem[N_SPACES_INDEX].bin, base=2)
     # print("spaces = ", num_spaces)
     # print("potential chars = ", 64-num_spaces)
@@ -104,27 +108,27 @@ def encrypt():
         reg_curr_lfsr = (reg_curr_lfsr<<1) | parity
         reg_index += 1
 
-def decrypt():
-    i = 255
-    do
-        i++
-        reg[x] = reg_space_char ^ starting_lfsr
-        errflg(reg[x])
-    while (data_mem[64] != reg[x]): 
+# def decrypt():
+#     i = 255
+#     do
+#         i += 1
+#         reg[x] = reg_space_char ^ starting_lfsr
+#         errflg(reg[x])
+#     while (data_mem[64] != reg[x]): 
     
-    i = 129
-    #!# LOOP2
-    i++
-    curr_lfsr = lfsr_start_state
-    index = 64
-    count = 0
-    #!# LOOP3
-    load = DM[index]
-    Acc = load ^ curr_lfsr
-    if (Acc != space_char) then LOOP2
-    count++
-    curr_lfsr = (curr_lfsr<<1) | parity(curr_lfsr & tap_pattern)
-    if (count != 10) then LOOP3
+#     i = 129
+#     #!# LOOP2
+#     i += 1
+#     curr_lfsr = lfsr_start_state
+#     index = 64
+#     count = 0
+#     #!# LOOP3
+#     load = DM[index]
+#     Acc = load ^ curr_lfsr
+#     if (Acc != space_char) then LOOP2
+#     count += 1
+#     curr_lfsr = (curr_lfsr<<1) | parity(curr_lfsr & tap_pattern)
+#     if (count != 10) then LOOP3
 
 def show_message():
     i = 0
@@ -143,7 +147,7 @@ def main():
     # print(""*80 + "\n")
 
     init_test_bench()
-    # print(data_mem)
+    print(data_mem)
 
     convert_to_bits()
     # print(data_mem)

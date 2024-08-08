@@ -1,4 +1,5 @@
-instructions:
+In
+tructions:
 
 set x y
 # reg[x] = reg[y]
@@ -239,7 +240,7 @@ reg:
 2 num_spaces + 64         # i
 3 tap_pattern             # tap_pattern
 4 curr_lfsr               # curr_lfsr
-5 LOOP1            # num_instructions
+5 LOOP1                   # num_instructions
 6 space_char ^ curr_lfsr  # store
 7 space_char              # load
 
@@ -263,7 +264,7 @@ reg:
 2 0                       # i
 3 tap_pattern             # tap_pattern
 4 curr_lfsr               # curr_lfsr
-5 LOOP1            # num_instructions --> index
+5 LOOP1                   # num_instructions --> index
 6 space_char ^ curr_lfsr  # store
 7 space_char              # load
 
@@ -402,7 +403,7 @@ reg:
 2 i++                     # i
 3 tap_pattern             # tap_pattern
 4 curr_lfsr               # curr_lfsr
-5 LOOP2            # num_instructions --> index
+5 LOOP2                   # num_instructions --> index
 6 DM[i] ^ curr_lfsr       # store
 7 delimiter_char          # load
 

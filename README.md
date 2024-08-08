@@ -1,96 +1,330 @@
-# CSE141L: Custom CPU
+# CSE141L: Custom CPU <!-- omit from toc -->
 
-Video: https://ucsd.zoom.us/rec/share/GqhcYmonFsbpWdIcupfuKaBvvV-i36tc3PIPE8vT5kw89Gx7gjqHQToGPyK7RlDB.-T6R4mlIe1iUxLd2?startTime=1630616838000
+This project is my completed lab assignment for UCSD's Introduction to Computer
+Architecture course. Over the course of 11 weeks, I designed a custom CPU
+architecture, instruction set and compiler that implements a [Linear Feedback
+Shift Register](https://tinyurl.com/yy6ct385) (LFSR) encryption and decryption
+algorithm.
 
-This is a custom CPU, instruction set and compiler that runs three programs. Program 1 is an encrypter using LFSR. Program 2 decrypts what program 1 encrypts. Program 3 is program 2 with error detection in the form of a parity bit. All programs pass the test benches. 
+## Contents <!-- omit from toc -->
 
-compiler.py takes the user-level assembly code, trims it of everything but code, calcuates the correct JUMP distances, and converts the assembly code into machine code.
+- [Tools and Code](#tools-and-code)
+- [Design](#design)
+- [Instructions](#instructions)
+    - [set x y](#set-x-y)
+    - [lsw 0 y](#lsw-0-y)
+    - [lsw x 0](#lsw-x-0)
+    - [bne x y](#bne-x-y)
+    - [xor x y](#xor-x-y)
+    - [add x](#add-x)
+    - [par x y](#par-x-y)
+    - [errflg x](#errflg-x)
+    - [lsor x y](#lsor-x-y)
+- [Programs 1-3](#programs-1-3)
+- [Code Documentation](#code-documentation)
+    - [START](#start)
+    - [lsw 0 0](#lsw-0-0)
+    - [#!# VAR EXTRA](#-var-extra)
+    - [\<-- VAR](#---var)
+    - [--\> VAR](#---var-1)
 
-The output of compiler.py is put into the src folder and to run a specific machine code on the CPU, the file needs to be renamed to "machine_code.txt".
-EX: machine_code1.txt --> machine_code.txt
+## Tools and Code
 
-The three user-level assembly code files are program1.txt, program2.txt, and program3.txt. Program1 is the best documented as I was still learning how to write in my assembly language. Program3 is much harder to follow. They all work though.
+The CPU has was, tested and verified all in software. The CPU code is written
+in [SystemVerilog](https://tinyurl.com/233xn2vv), which is a hardware
+description and verification language that can be used to model, design,
+simulate, test and implement electronic systems. I used
+[Quartus](https://tinyurl.com/2c3h9wee) to verify and simulate, and
+[ModelSim](https://tinyurl.com/3hfuzku6) to test and debug.
 
-emulator.py was my atempt to understand the programs at a higher level of code which helped me write them out in assembly. encode() is functioning python and decode() is like sudo assembly.
+With only SystemVerilog, I would have to write the binary commands by hand.
+This would be a nightmare to read, test and debug so I created a
+[compiler](./compiler/compiler.py) in Python  to convert [human-readable
+code](./compiler/program1.txt) to [assembly](./compiler/assembly_code1.txt),
+and then to [binary](./src/machine_code1.txt).
 
-Diagram of CPU is a paint.net file and you can set the layers to visible to see their data path throught the CPU.
+## Design
 
-The architecture is very MIPS-like but with the idea of an accumulator to save bits.
-About half of the instructions use the ALU and store into reg[0] which I call "Acc".
-I needed a way to set registers to other things after being stored in Acc so I have a set instruction.
-Then, I needed a way to load and store to data memory so I have those.
-Last, I needed a branch statement. I made the value adding to PC signed so that I could do forward and backward branches.
+The MIPS CPU architecture was our guiding example while learning how a CPU is
+organized and designed. By the end of the course we understood very well how
+each piece of the CPU worked to complete complex tasks. This was my starting
+point for designing my CPU.
 
-8 instructions and 8 registers.
-Registers are 8 bits wide.
-Indirect addressing of registers and memory.
-Instructions are 9 bits for 1 instr, and then 1 or 2 reg addresses, or an immediate value.
-Look at Definitions.sv to see what binary digits map to what instructions.
+**Basic MIPS architecture**:[^1]
 
-Instructions:  
-Note that Acc = reg[0] and some other values are hardcoded.
+![MIPS_CPU](./doc/MIPS_CPU.jpg)
 
-set x y  
-// reg[x] = reg[y]  
+To better understand how I should design the CPU and the LFSR encryption and
+decryption algorithm I outlined the project sudo code and implemented pieces
+that I didn't quite understand enough in Python. The Python
+[emulator](./emulator/emulator.py) isn't complete but it was enough to help me
+piece together the SystemVerilog as I went. By the time I got to the
+decryption, I just needed the sudo code.
 
-lsw 0 y  
-// DM[reg[y]] = reg[6]  
-// store  
+The biggest constraint in designing this CPU is the 9 bit instruction size. The
+number of instructions and registers need to be balanced so that all of the
+operations can be performed effectively. I decided to use an
+[Accumulator](https://tinyurl.com/357f65v5) to store intermediate results from
+the ALU instead of using direct assignment.
 
-lsw x 0  
-// reg[7] = DM[reg[x]]  
-// load  
+This single instruction requires 12 bits. 3 for each address (`sum`, `a` and
+`b`) and 3 for the operation (`+`).
 
-bne x y  
-// if Acc != reg[x] then PC-=reg[y]  
+```py
+sum = a + b
+```
 
-xor x y  
-// Acc = {1'b0, (reg[x][6:0] ^ reg[y][6:0])}  
+These two statements do the same thing, but only require 9 bits and the
+Accumulator.
 
-add x  
-// Acc = Acc + x  
-// x is a 6 bit immediate value  
+```py
+Accumulator = a + b
+sum = Accumulator
+```
 
-par x y  
-// Acc = {7'b0, (^(reg[x] & reg[y]))}  
-// Acc = a 7 bit 0 or 1  
+So each instruction requires more steps to be completed, but requires less bits
+since the Accumulator register is hardwired.
 
-errflg x  
-// Acc = {^reg[x][6:0], reg[x][6:0]}  
-// x is a 3 bit reg address  
+Registers are directly addressed, but Data Memory and the Program Counter use
+indirect addressing. To be able to do forward and backwards jumps from
+branching, the Program Counter accepts signed ([two's
+complement](https://tinyurl.com/bdwt5kr4)) values.
 
-lsor x y  
-// Acc = {1'b0, ((reg[x][6:0] << 1) | reg[y][6:0])}  
-// Acc = left-shift(reg[x]) or reg[y]  
+After going over my emulator code, I estimated that 8 instructions and 8
+registers would be enough. In the end, I needed to squeeze in an extra
+instruction, do a lot of register hot potato, and use Data Memory from time
+to time to make it all work.
 
-Some notes about my user-level code:  
-	"#!# LOOP_NAME" is used to denote the start and end of a loop.  
-	"--> add LOOP_NAME" is used to add a positive value to the PC.  
-	"<-- add LOOP_NAME" is used to add a negative value to the PC.  
-	Anything before "START" is considered a comment.  
-	Anything but valid instructions after "START" are considered comments.  
-		
-EX of a forward branch:  
-	...  
-	--> add LOOP1  
-	...  
-	#!# LOOP1  
-	bne x y  
-	...  
-	#!# LOOP1 END  
-				
-The compiler will get rid of anything after LOOP_NAME so "END" is just there for readability.  
-This will branch to the instruction AFTER "#!# LOOP_NAME END"  
-				
-EX of a backward branch:  
-	#!# LOOP2  
-	...  
-	<-- add LOOP2  
-	...  
-	bne x y  
-	#!# LOOP2 END  
-				
-This will branch backward and start the PC at the instruction AFTER "#!# LOOP_NAME"  
-			
-				
-		
+**My CPU diagram**:
+
+![CPU](doc/My_CPU_Diagram.png)
+
+**Quartus generated diagram**:
+
+![bark.py](doc/Quartus_CPU_Diagram.png)
+
+## Instructions
+
+`register[0]` is the Accumulator (Acc) register.
+
+### set x y
+
+Sets register `x` equal to register `y`.
+
+`register[x] = register[y]`
+
+- [CPU Path Diagram](./doc/SET.png)
+
+**Constraints**:
+
+- `0 <= x <= 7`
+- `0 <= y <= 7`
+
+### lsw 0 y
+
+Stores `register[6]` into Data Memory at the address in `register[7]`.
+
+`DataMem[register[y]] = register[6]`
+
+- [CPU Path Diagram](./doc/SW.png)
+
+**Constraints**:
+
+- `0 <= y <= 7`
+
+### lsw x 0
+
+Loads `register[7]` with value from Data Memory at the address in
+`register[x]`.
+
+`register[7] = DataMem[register[x]]`
+
+- [CPU Path Diagram](./doc/LW.png)
+
+**Constraints**:
+
+- `0 <= x <= 7`
+
+### bne x y
+
+Adds (signed) `register[y]` to Program Counter if `register[x]` is not equal to
+the Accumulator.
+
+```py
+if Acc != register[x], then PC += register[y]
+```
+
+- [CPU Path Diagram](./doc/BNE.png)
+
+**Constraints**:
+
+- `0 <= x <= 7`
+- `0 <= y <= 7`
+- `-128 <= register[y] <= 127`
+
+### xor x y
+
+XORs the 7 LSBs of `register[x]` and `register[y]`, prepends a zero and
+stores the value in the Accumulator.
+
+`Acc = {1'b0, (register[x][6:0] ^ register[y][6:0])}`
+
+- [CPU Path Diagram](./doc/XOR.png)
+
+**Constraints**:
+
+- `0 <= x <= 7`
+- `0 <= y <= 7`
+
+### add x
+
+Adds `x` to the Accumulator.
+
+`Acc = Acc + x`
+
+- [CPU Path Diagram](./doc/ADD.png)
+
+**Constraints**:
+
+- `0 <= x <= 63`
+
+### par x y
+
+Bitwise ANDs `register[x]` and `register[y]`, reduction XORs that value,
+prepends 7 zeros, and stores that value in the Accumulator.
+
+`Acc = {7'b0, (^(register[x] & register[y]))}`
+
+- [CPU Path Diagram](./doc/PAR.png)
+
+**Constraints**:
+
+- `0 <= x <= 7`
+- `0 <= y <= 7`
+
+### errflg x
+
+Reduction XORs the 7 LSBs of `register[x]`, replaces the MSB of `register[x]`
+and stores that in the Accumulator.
+
+`Acc = {^register[x][6:0], register[x][6:0]}`
+
+- [CPU Path Diagram](./doc/ERRFLG.png)
+
+**Constraints**:
+
+- `0 <= x <= 7`
+
+### lsor x y
+
+Left shifts 7 LSBs of `register[x]`, prepends a zero and bitwise ORs that with
+7 LSBs of `register[y]`.
+
+`Acc = {1'b0, ((register[x][6:0] << 1) | register[y][6:0])}`
+
+- [CPU Path Diagram](./doc/LSOR.png)
+
+**Constraints**:
+
+- `0 <= x <= 7`
+- `0 <= y <= 7`
+
+## Programs 1-3
+
+This CPU has been designed to run three programs.
+[Program1](./compiler/program1.txt) is a LFSR encrypter.
+[Program2](./compiler/program2.txt) is a LFSR decrypter. Last,
+[Program3](./compiler/program3.txt) is a LFSR decrypter with parity bit error
+detection. The class was given test benches with preloaded values to run on our
+CPUs. So I could test Program 3 even without writing a program to encrypt with
+a parity bit.
+
+## Code Documentation
+
+Anything that isn't an instruction isn't compiled and the compiler does no
+error checking.
+
+### START
+
+Indicated the start of the code. This made parsing the program file easier
+since I put a lot of notes at the beginning of the file.
+
+### lsw 0 0
+
+Instruction that ends the program.
+
+### #!# VAR EXTRA
+
+Sets the bounds for the jumps. `VAR` must be a unique name and every opening
+bound must be closed with the same name. `EXTRA` is ignored text, but useful
+for documentation.
+
+```CPU
+#!# LOOP
+
+...
+
+#!# LOOP END
+```
+
+### <-- VAR
+
+Counts the number of instructions between the matching jump bounds (`#!# VAR`)
+and then makes this value negative. Before this is run, the Accumulator needs
+to be set to zero so that the jump value is accurate. Then, this value needs to
+be stored into a register and used as the second argument in the corresponding
+loop `bne` instruction.
+
+```CPU
+#!# LOOP1
+
+... # bne jumps here
+
+xor 3 3
+# Acc = 0
+
+<-- add LOOP1
+# Acc = negative number of instructions for LOOP1
+
+set 2 0
+# register[2] = Acc
+
+...
+
+bne 3 2
+# if Acc != reg[3] then PC += reg[2]
+
+#!# LOOP1 END
+```
+
+### --> VAR
+
+Counts the number of instructions between the matching jump bounds (`#!# VAR`).
+Before this is run, the Accumulator needs to be set to zero so that the jump
+value is accurate. Then, this value needs to be stored into a register and used
+as the second argument in the corresponding loop `bne` instruction.
+
+```CPU
+xor 3 3
+# Acc = 0
+
+--> add LOOP2
+# Acc = number of instructions for LOOP2
+
+set 2 0
+# register[2] = Acc
+
+#!# LOOP2
+
+bne 6 2
+# if Acc != reg[6] then PC += reg[2]
+
+... # instructions to be jumped over
+
+#!# LOOP2 END
+
+... # bne jumps here
+```
+
+[^1]: Patterson, David A., and John L. Hennessy. Computer Organization and
+    Design MIPS Edition the Hardware. Morgan Kaufmann, 2020, Section 4.1.
